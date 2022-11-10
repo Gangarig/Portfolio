@@ -1,0 +1,26 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
+  width: 100%;
+}
+footer .flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  font-size: 1.5rem;
+  font-family: "Anton", sans-serif;
+}
+footer .flexbox i {
+  margin: 5px;
+}
+footer .flexbox i:hover {
+  scale: 1.1;
+  transition: 1ms;
+  color: gray;
+}
+footer .flexbox p {
+  padding-right: 20px;
+}/*# sourceMappingURL=footer.component.css.map */

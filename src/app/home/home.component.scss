@@ -1,0 +1,200 @@
+$color-1: #FAF7F0; /*bg-1*/
+$color-2: #FAF7F0;  /*bg-2*/
+$color-3: #E0144C;  /*shade*/
+$color-4: #42C2FF; /*text*/
+$color-5:   #1D1CE5 ;
+$color-5:   #1D1CE5 ;
+$color-5:   #1D1CE5;
+
+/*
+font-family: 'Anton', sans-serif;
+font-family: 'Bebas Neue', cursive;
+font-family: 'Major Mono Display', monospace;
+font-family: 'Press Start 2P', cursive;
+*/
+
+hr{
+    padding: 0;
+    margin: 0;
+    border: 2px solid black;
+    width: 100%;
+}
+div.contain{
+    width: 100%;
+    height: 3000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    div.header{
+        width: 100%;
+        background-color: $color-1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        header {
+            display: flex;
+            width: 1500px;
+            height: 500px;
+            justify-content: space-evenly;
+        h1.headertext {
+            padding-left: 100px;
+            padding-top: 100px;
+            width: 500px;
+            color: black;
+            .space {
+                padding-left: 15px;
+            }
+            font-size: 3rem;
+            font-family: 'Anton',sans-serif;
+            span:hover{
+                color:$color-3;
+                text-transform: uppercase;
+                transition: 0.5s;
+            }
+        }
+        .img1 {
+            width: auto;
+            height: 400px;
+            object-fit: cover;
+            border: none;
+            position: relative;
+            top: 50px;
+            background-color: $color-4;
+        }
+        }
+    }
+
+    /*about section*/
+    div.top{
+        height: 500px;
+        width: 100%;
+        background-color: $color-2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div.topcontent{
+            width: 1500px;
+            display: flex;
+            font-family: 'Anton',sans-serif;
+            padding-left: 100px;
+        
+        h2{
+            writing-mode: vertical-lr;
+            font-family: 'Press Start 2P';
+            font-size: 3rem;
+        }
+        .img2{
+            height: 400px;
+            width: auto;
+            object-fit: contain;
+        }
+        div.aboutmetext{
+            width: 400px;
+            height: 400px;
+            font-size: 1.2rem;
+            padding-top: 80px;
+            padding-left: 50px;
+            font-family: 'Courier New', Courier, monospace;
+            b{font-weight: bold;
+                font-size: 1.2rem;}
+        }
+        }
+    }
+    /*about section ends here*/
+
+    div.middle{
+        height: 500px;
+        width: 100%;
+        background-color: $color-1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    div.bottom{
+        height: 500px;
+        width: 100%;
+        background-color: $color-2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    div.randomfacts{
+        height: 500px;
+        width: 100%;
+        background-color: $color-1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    div.contact{
+        height: 500px;
+        width: 100%;
+        background-color: $color-2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div.contactpos {
+            width: 1500px;
+            height: 500px;
+        
+            h2{
+                text-align: center;
+            }
+            div.contactcontent{
+              display: flex;
+              justify-content: space-evenly;
+            }
+            div.info{
+                display: flex;
+                flex-direction: column;
+            }
+            div.socialicons{
+                font-size: 3rem;
+                writing-mode: vertical-lr;
+                i{
+                    margin: 10px;
+                }
+            }
+            div.contactform{
+                display: flex;
+                flex-direction: column;
+                input{
+                    border: none;
+                margin: 10px;
+                 }
+                input:focus{
+                    outline: none;
+                }
+                textarea{
+                    border: none;
+                    height: 100px;
+                    margin: 10px;
+                }:focus{
+                    outline: none;
+                }
+                button{
+                    width: fit-content;
+                    margin-left: 36%;
+                }
+           
+            }
+        
+
+
+        }}
+            
+                
+        
+    
+}
+
+
+
+
+
+
+
+

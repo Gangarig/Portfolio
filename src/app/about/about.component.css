@@ -1,0 +1,12 @@
+.Aboutpage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Aboutpage .box {
+  height: 700px;
+}
+.Aboutpage .box2 {
+  background-color: gray;
+}/*# sourceMappingURL=about.component.css.map */

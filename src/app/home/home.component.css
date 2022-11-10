@@ -1,0 +1,184 @@
+/*bg-1*/
+/*bg-2*/
+/*shade*/
+/*text*/
+/*
+font-family: 'Anton', sans-serif;
+font-family: 'Bebas Neue', cursive;
+font-family: 'Major Mono Display', monospace;
+font-family: 'Press Start 2P', cursive;
+*/
+hr {
+  padding: 0;
+  margin: 0;
+  border: 2px solid black;
+  width: 100%;
+}
+
+div.contain {
+  width: 100%;
+  height: 3000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*about section*/
+  /*about section ends here*/
+}
+div.contain div.header {
+  width: 100%;
+  background-color: #FAF7F0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.contain div.header header {
+  display: flex;
+  width: 1500px;
+  height: 500px;
+  justify-content: space-evenly;
+}
+div.contain div.header header h1.headertext {
+  padding-left: 100px;
+  padding-top: 100px;
+  width: 500px;
+  color: black;
+  font-size: 3rem;
+  font-family: "Anton", sans-serif;
+}
+div.contain div.header header h1.headertext .space {
+  padding-left: 15px;
+}
+div.contain div.header header h1.headertext span:hover {
+  color: #E0144C;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+div.contain div.header header .img1 {
+  width: auto;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: none;
+  position: relative;
+  top: 50px;
+  background-color: #42C2FF;
+}
+div.contain div.top {
+  height: 500px;
+  width: 100%;
+  background-color: #FAF7F0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.contain div.top div.topcontent {
+  width: 1500px;
+  display: flex;
+  font-family: "Anton", sans-serif;
+  padding-left: 100px;
+}
+div.contain div.top div.topcontent h2 {
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
+  font-family: "Press Start 2P";
+  font-size: 3rem;
+}
+div.contain div.top div.topcontent .img2 {
+  height: 400px;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+div.contain div.top div.topcontent div.aboutmetext {
+  width: 400px;
+  height: 400px;
+  font-size: 1.2rem;
+  padding-top: 80px;
+  padding-left: 50px;
+  font-family: "Courier New", Courier, monospace;
+}
+div.contain div.top div.topcontent div.aboutmetext b {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+div.contain div.middle {
+  height: 500px;
+  width: 100%;
+  background-color: #FAF7F0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.contain div.bottom {
+  height: 500px;
+  width: 100%;
+  background-color: #FAF7F0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.contain div.randomfacts {
+  height: 500px;
+  width: 100%;
+  background-color: #FAF7F0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.contain div.contact {
+  height: 500px;
+  width: 100%;
+  background-color: #FAF7F0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.contain div.contact div.contactpos {
+  width: 1500px;
+  height: 500px;
+}
+div.contain div.contact div.contactpos h2 {
+  text-align: center;
+}
+div.contain div.contact div.contactpos div.contactcontent {
+  display: flex;
+  justify-content: space-evenly;
+}
+div.contain div.contact div.contactpos div.info {
+  display: flex;
+  flex-direction: column;
+}
+div.contain div.contact div.contactpos div.socialicons {
+  font-size: 3rem;
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
+}
+div.contain div.contact div.contactpos div.socialicons i {
+  margin: 10px;
+}
+div.contain div.contact div.contactpos div.contactform {
+  display: flex;
+  flex-direction: column;
+}
+div.contain div.contact div.contactpos div.contactform input {
+  border: none;
+  margin: 10px;
+}
+div.contain div.contact div.contactpos div.contactform input:focus {
+  outline: none;
+}
+div.contain div.contact div.contactpos div.contactform textarea {
+  border: none;
+  height: 100px;
+  margin: 10px;
+}
+div.contain div.contact div.contactpos div.contactform :focus {
+  outline: none;
+}
+div.contain div.contact div.contactpos div.contactform button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 36%;
+}/*# sourceMappingURL=home.component.css.map */

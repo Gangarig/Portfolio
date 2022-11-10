@@ -1,0 +1,32 @@
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  justify-content: space-between;
+  height: 3rem;
+}
+nav .navlogo {
+  padding-left: 15px;
+}
+nav .navlogo:hover {
+  color: gray;
+  scale: 1.1;
+}
+nav .navlinks {
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+}
+nav .navlinks a {
+  color: white;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  font-family: "Anton", sans-serif;
+}
+nav .navlinks a:hover {
+  color: gray;
+  transition: 0.2s;
+}/*# sourceMappingURL=navbar.component.css.map */
