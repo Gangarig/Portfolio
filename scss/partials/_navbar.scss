@@ -1,0 +1,170 @@
+// Fonts and Color imported here
+@import "../fonts_and_colors/colors";
+@import "../fonts_and_colors/fonts";
+
+
+nav {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    font-family: $mainFont;
+    justify-content: baseline;
+    align-items: baseline;
+    position: sticky;
+    top: 0;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    z-index: 2;
+    background-color: $background;
+    
+}
+nav ul li {
+    list-style: none;
+    text-decoration: underline 1px;
+}
+nav ul li a {
+    list-style: none;
+    text-decoration: underline 1px;
+    color: $textBlack;
+}
+.brandName{
+
+}
+.links{
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    width: 30vw;
+    font-size: 20px;   
+    gap: 10px;
+    padding-left: 2rem;
+}
+.logos{
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    width: 30vw;
+    justify-content: flex-end;
+    font-size: 22px;
+    gap: 5px;
+    padding-right: 2rem;
+    li a:hover, li a:focus {
+        color: $hover;
+    }
+}   
+.brandName {
+    font-size: 27px;
+}
+.hamburger {
+    display: none;
+}
+.responsive{
+    display: none;
+}
+
+
+@media screen and (max-width:1366) {
+    .links{
+        font-size: 18px;   
+        gap: 10px;
+        padding-left: 20px;
+    }
+    .brandName {
+        font-size: 23px;
+    }
+}
+@media screen and (max-width:1024px) {
+    nav{
+        color: $textWhite;
+        background-color: $backgroundNav;
+        height: 70px;
+    }
+    .logos{
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+    .links{
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+    .brandName {
+        top: 1rem;
+        left: 1rem;
+        font-size: 30px;
+        position: absolute;
+        padding: 0;
+        margin: 0;
+    }
+    .hamburger {
+        position: absolute;
+        top: 1.3rem;
+        right: 1rem;
+        display: block;
+        font-size: 30px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        color: $textWhite;
+    }
+    button:focus, button:hover {
+        scale: 1.1;
+    }
+    button:active {
+        scale: 0.9;
+    }
+    .responsive{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+        font-size: 25px;
+        font-family: $mainFont;
+        transition: 0.2s;
+        opacity: 0;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        height: 0;
+        ul li{
+            text-align: center;
+            transition: 0.5;
+            opacity: 0;
+            
+
+        }
+        a {
+            color: $textWhite;
+            text-decoration: none;
+        }
+        .icons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            i:hover , i:focus {
+                color: $hover;
+                scale: 1.1;
+                transition: 0.2s;
+            }
+        }
+
+    }   
+
+    .active{
+        padding-top: 50px;
+        opacity: 1;
+        color: $textWhite;
+        height: 250px;
+        background-color: $backgroundNav;
+        
+    }
+
+
+
+}
+

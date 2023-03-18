@@ -1,0 +1,25 @@
+// Fonts and Color imported here
+@import "fonts_and_colors/fonts";
+@import "fonts_and_colors/colors";
+
+// partials are imported here
+@import "partials/navbar";
+@import "partials/header";
+@import "partials/projects";
+@import "partials/projects";
+@import "partials/about";
+@import "partials/skills";
+@import "partials/experience";
+@import "partials/contact";
+@import "partials/footer";
+
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: $background;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}

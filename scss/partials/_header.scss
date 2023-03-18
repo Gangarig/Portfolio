@@ -1,0 +1,104 @@
+// Fonts and Color imported here
+@import "../fonts_and_colors/colors";
+@import "../fonts_and_colors/fonts";
+
+
+header {
+    height: 500px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    flex-direction: column;
+
+
+}
+.hero {
+    width: 60vw;
+    font-size: 45px;
+    text-align: center;
+    padding-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 50px;
+    justify-content: space-evenly;
+    div{ 
+        span {
+        font-family: $titleFont;
+        text-shadow: 2px 2px gray;
+        transition: transform 0.2s ease;
+    }   span:hover {
+        color: $hover;
+        transform: translateY(-5px);
+        scale: 2;
+    }
+}
+}
+
+p {
+    font-size: 30px;
+    font-family: $mainFont;
+}
+.space{
+    margin-left: 30px;
+}
+
+/* CSS */
+.button-89 {
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #373B44;
+    font-family: $mainFont;
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-89:hover,
+.button-89:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+.button-89:active {
+  background: var(--color);
+  color: #fff;
+}
+
+@media screen and (max-width:720px) {
+    .hero {
+        font-size: 35px;
+        line-height: 37px;
+    }
+}
+
+@media screen and (max-width:587px) {
+    .hero {
+        font-size: 18px;
+        line-height: 20px;
+    }
+    p {
+        font-size: 15px;
+        font-family: $mainFont;
+    }
+    .space{
+        margin-left: 15px;
+    }
+}

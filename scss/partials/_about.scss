@@ -1,0 +1,163 @@
+// Fonts and Color imported here
+@import "../fonts_and_colors/colors";
+@import "../fonts_and_colors/fonts";
+
+
+#about {
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 20px;
+    font-family: $mainFont;
+
+    img {
+        height: 600px;
+        --s: 10px; /* control the size */
+        padding: var(--s);
+        border: calc(2*var(--s)) solid #0000;
+        outline: 1px solid #000;
+        outline-offset: calc(-1*var(--s));
+        background: conic-gradient(from 90deg at 1px 1px,#0000 25%,#000 0);
+      }
+      article {
+        height: 600px;
+        max-width: 1000px;
+        min-width: 200px;
+        --s: 10px; /* control the size */
+        padding: var(--s);
+        border: calc(2*var(--s)) solid #0000;
+        outline: 1px solid #000;
+        outline-offset: calc(-1*var(--s));
+        background: conic-gradient(from 90deg at 1px 1px,#0000 25%,#000 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        flex-direction: column;
+
+        a{
+          font-family: $titleFont;
+          font-weight: 400;
+          width: 100%;
+          text-align: start;
+          font-size: 30px;
+        }
+      }
+      
+}
+
+@media screen and (min-width:2000px) {
+  #about {
+    font-size: 30px;
+    img{
+      height: 500px;
+    }
+    article{
+      height: 500px;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
+}
+@media screen and (min-width:1500px) {
+  #about {
+    font-size: 25px;
+    img{
+      height: 500px;
+    }
+    article{
+      height: 500px;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
+}
+
+@media screen and (max-width:1372px) {
+  #about {
+    font-size: 20px;
+    img{
+      height: 500px;
+    }
+    article{
+      height: 500px;
+    }
+  }
+  
+}
+
+@media screen and (max-width:1276px) {
+  #about {
+    font-size: 17px;
+    img{
+      height: 500px;
+    }
+    article{
+      height: 500px;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
+}
+@media screen and (max-width:1025px) {
+  #about {
+    flex-direction: column-reverse;
+    font-size: 20px;
+    img{
+      height: 500px;
+    }
+    article{
+      height: 500px;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
+}
+@media screen and (max-width:1025px) {
+  #about {
+    flex-direction: column-reverse;
+    font-size: 20px;
+    img{
+      height: 400px;
+    }
+    article{
+      height: 600px;
+      padding-left: 2rem;
+      padding-right: 2rem;
+
+    }
+  }
+  
+}
+@media screen and (max-width:690px) {
+  #about {
+    flex-direction: column-reverse;
+    font-size: 15px;
+    img{
+      height: 400px;
+    }
+    article{
+      height: 600px;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-bottom: 2rem;
+    }
+  }
+  
+}
+
+
+
+
+
+
+
