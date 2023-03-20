@@ -1,19 +1,27 @@
 #experience {
     display: flex;
-    width: 100vw;
     flex-direction: column;
-    margin: 10rem;
     color: var(--black);
+    margin: 10rem;
+    background-color: #303030;
+ 
+    border-radius: 20px;
+
     h5 {
         font-family: $mainFont;
         font-size: 30px;
         font-weight: 400;
         margin: 0;
+        margin-left: 5rem;
     }
     p {
         font-family: $mainFont;
         color: var(--blue);
+        margin-left: 5rem;
     }
+}
+.container {
+    margin: 5rem;
 }
 
 .blue{

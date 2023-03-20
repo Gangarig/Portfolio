@@ -516,20 +516,27 @@ a {
 
 #experience {
   display: flex;
-  width: 100vw;
   flex-direction: column;
-  margin: 10rem;
   color: var(--black);
+  margin: 10rem;
+  background-color: #303030;
+  border-radius: 20px;
 }
 #experience h5 {
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 30px;
   font-weight: 400;
   margin: 0;
+  margin-left: 5rem;
 }
 #experience p {
   font-family: "PT Sans Narrow", sans-serif;
   color: var(--blue);
+  margin-left: 5rem;
+}
+
+.container {
+  margin: 5rem;
 }
 
 .blue {
@@ -557,8 +564,8 @@ a {
 }
 
 :root {
-  --blue:rgb(30, 42, 211);
-  --waterblue:rgba(0, 89, 255, 0.904);
+  --blue:rgb(83, 94, 243);
+  --waterblue:rgb(75, 130, 231);
   --pink:rgb(134, 64, 167);
   --green:rgba(13, 126, 28, 0.973);
   --brown:rgb(160, 114, 71);
