@@ -1,11 +1,12 @@
-// Fonts and Color imported here
-@import "fonts_and_colors/fonts";
-@import "fonts_and_colors/colors";
+// Fonts 
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=PT+Sans+Narrow:wght@400;700&display=swap');
+// font-family: 'PT Sans Narrow', sans-serif;
+$mainFont :'PT Sans Narrow', sans-serif;
+$titleFont: 'Anton', sans-serif;
 
 // partials are imported here
 @import "partials/navbar";
 @import "partials/header";
-@import "partials/projects";
 @import "partials/projects";
 @import "partials/about";
 @import "partials/skills";
@@ -14,11 +15,42 @@
 @import "partials/footer";
 
 
+//for Dark mode 
+$color1:#252525;
+$color2:#303030;
+$color3:#1F1F1F;
+$color4:#1B1C1E;
+$color5:#2b2b2b;
+
+
+
+:root {
+    --blue:rgb(30, 42, 211);
+    --waterblue:rgba(0, 89, 255, 0.904);
+    --pink:rgb(134, 64, 167);
+    --green:rgba(13, 126, 28, 0.973);
+    --brown:rgb(160, 114, 71);
+    --yellow:rgb(156, 156, 26);
+    --background :   #DDDDDD;
+    --backgroundNav :#DDDDDD;
+    --hover :        #DA0037;
+    --black :       black;
+    --white :       #FFFFFF;
+    --border-shadow:rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 1px 2px 2px 1px;
+}
+.darkmode {
+    --background :   #424242;
+    --backgroundNav :#252525;
+    --hover :        #DA0037;
+    --black :          #FFFFFF;
+    --white :          black;
+    --border-shadow : rgba(29, 28, 28, 0.671) 0px 2px 5px 0px, rgba(204, 204, 204, 0.945) 1px 2px 2px 1px;
+}
 html {
     scroll-behavior: smooth;
 }
 body {
-    background-color: $background;
+    background-color: var(--background);
     margin: 0;
     padding: 0;
     overflow-x: hidden;

@@ -1,10 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=PT+Sans+Narrow:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=PT+Sans+Narrow:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=PT+Sans+Narrow:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=PT+Sans+Narrow:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=PT+Sans+Narrow:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=PT+Sans+Narrow:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=PT+Sans+Narrow:wght@400;700&display=swap");
 nav {
   display: flex;
   width: 100vw;
@@ -14,22 +8,21 @@ nav {
   align-items: baseline;
   position: sticky;
   top: 0;
-  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  box-shadow: var(--border-shadow);
   z-index: 2;
-  background-color: #DDDDDD;
+  background-color: var(--backgroundNav);
+}
+nav #sun {
+  cursor: pointer;
 }
 
 nav ul li {
   list-style: none;
-  -webkit-text-decoration: underline 1px;
-          text-decoration: underline 1px;
 }
 
 nav ul li a {
   list-style: none;
-  -webkit-text-decoration: underline 1px;
-          text-decoration: underline 1px;
-  color: black;
+  color: var(--black);
 }
 
 .links {
@@ -38,9 +31,12 @@ nav ul li a {
   margin: 0;
   padding: 0;
   width: 30vw;
-  font-size: 20px;
+  font-size: 25px;
   gap: 10px;
   padding-left: 2rem;
+}
+.links li a {
+  text-decoration: none;
 }
 
 .logos {
@@ -50,16 +46,17 @@ nav ul li a {
   padding: 0;
   width: 30vw;
   justify-content: flex-end;
-  font-size: 22px;
-  gap: 5px;
+  font-size: 25px;
+  gap: 10px;
   padding-right: 2rem;
 }
 .logos li a:hover, .logos li a:focus {
-  color: #DA0037;
+  color: var(--hover);
 }
 
 .brandName {
-  font-size: 27px;
+  font-size: 30px;
+  color: var(--black);
 }
 
 .hamburger {
@@ -70,21 +67,24 @@ nav ul li a {
   display: none;
 }
 
-@media screen and (max-width: 1366) {
+@media screen and (max-width: 1366px) {
   .links {
     font-size: 18px;
     gap: 10px;
     padding-left: 20px;
   }
   .brandName {
-    font-size: 23px;
+    font-size: 15px;
   }
 }
 @media screen and (max-width: 1024px) {
   nav {
-    color: #EDEDED;
-    background-color: #171717;
+    color: var(--white);
+    background-color: var(--backgroundNav);
     height: 70px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: rgba(29, 28, 28, 0.671) 0px 2px 5px 0px, rgba(204, 204, 204, 0.945) 0px 1px 1px 0px;
   }
   .logos {
     display: none;
@@ -97,12 +97,14 @@ nav ul li a {
     padding: 0;
   }
   .brandName {
-    top: 1rem;
+    top: 1.5rem;
     left: 1rem;
-    font-size: 30px;
+    font-size: 20px;
     position: absolute;
     padding: 0;
     margin: 0;
+    z-index: 2;
+    color: var(--black);
   }
   .hamburger {
     position: absolute;
@@ -113,7 +115,8 @@ nav ul li a {
     border: none;
     background-color: transparent;
     cursor: pointer;
-    color: #EDEDED;
+    color: var(--black);
+    z-index: 2;
   }
   button:focus, button:hover {
     scale: 1.1;
@@ -129,21 +132,20 @@ nav ul li a {
     align-items: center;
     font-size: 25px;
     font-family: "PT Sans Narrow", sans-serif;
-    transition: 0.2s;
+    transition: 0.5s;
     opacity: 0;
-    overflow: hidden;
     margin: 0;
     padding: 0;
     height: 0;
   }
-  .responsive ul li {
-    text-align: center;
-    transition: 0.5;
-    opacity: 0;
-  }
-  .responsive a {
-    color: #EDEDED;
+  .responsive .link {
+    color: var(--black);
     text-decoration: none;
+  }
+  .responsive .link:hover, .responsive .link:focus {
+    background-color: var(--backgroundNav);
+    border-radius: 5%;
+    color: var(--textBlack);
   }
   .responsive .icons {
     display: flex;
@@ -152,17 +154,23 @@ nav ul li a {
     align-items: center;
     cursor: pointer;
   }
-  .responsive .icons i:hover, .responsive .icons i:focus {
-    color: #DA0037;
+  .responsive .icons li a {
+    color: var(--black);
+  }
+  .responsive .icons li a:hover, .responsive .icons li a:focus {
+    color: var(--hover);
     scale: 1.1;
     transition: 0.2s;
   }
   .active {
     padding-top: 50px;
     opacity: 1;
-    color: #EDEDED;
+    color: var(--white);
+    transition: 0.5s;
     height: 250px;
-    background-color: #171717;
+    background-color: var(--backgroundNav);
+    border-radius: 10px;
+    box-shadow: rgba(29, 28, 28, 0.671) 0px 2px 5px 0px, rgba(204, 204, 204, 0.945) 0px 1px 1px 0px;
   }
 }
 header {
@@ -179,21 +187,21 @@ header {
   width: 60vw;
   font-size: 45px;
   text-align: center;
-  padding-top: 200px;
+  padding-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   line-height: 50px;
   justify-content: space-evenly;
+  color: var(--black);
 }
 .hero div span {
   font-family: "Anton", sans-serif;
-  text-shadow: 2px 2px gray;
   transition: transform 0.2s ease;
 }
 .hero div span:hover {
-  color: #DA0037;
+  color: var(--hover);
   transform: translateY(-5px);
   scale: 2;
 }
@@ -201,6 +209,7 @@ header {
 p {
   font-size: 30px;
   font-family: "PT Sans Narrow", sans-serif;
+  color: var(--black);
 }
 
 .space {
@@ -211,7 +220,7 @@ p {
 .button-89 {
   --b: 3px; /* border thickness */
   --s: .45em; /* size of the corner */
-  --color: #373B44;
+  --color: var(--black);
   font-family: "PT Sans Narrow", sans-serif;
   padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
   color: var(--color);
@@ -265,111 +274,15 @@ p {
 
 h2 {
   font-size: 30px;
-  font-family: "Anton", sans-serif;
+  font-family: "PT Sans Narrow", sans-serif;
   padding-left: 5rem;
-  font-weight: 400;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-.cards {
-  display: grid;
-  gap: 3rem;
-  grid-template-columns: 1fr 1fr 1fr;
-  place-items: center;
-  padding-left: 4rem;
-  padding-right: 4rem;
-}
-
-.card {
-  width: 27vw;
-  height: 27vw;
-  font-size: 20px;
-  font-weight: bold;
-  font-family: "PT Sans Narrow", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  border: 1px solid black;
-}
-.card img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 27vw;
-  width: 27vw;
-  position: absolute;
-  opacity: 1;
-}
-.card span {
-  opacity: 0;
-  font-size: 30px;
-  font-family: "PT Sans Narrow", sans-serif;
   font-weight: 700;
-}
-
-.card:hover, .card:focus {
-  border: none;
-}
-.card:hover img, .card:focus img {
-  opacity: 0;
-  transition: 0.3s;
-}
-.card:hover span, .card:focus span {
-  opacity: 1;
-  transition: 0.5s;
-}
-
-@media (max-width: 1235px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  .card {
-    width: 40vw;
-    height: 40vw;
-  }
-  .card img {
-    width: 40vw;
-    height: 40vw;
-  }
-}
-@media (max-width: 768px) {
-  .cards {
-    grid-template-columns: 1fr;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  .card {
-    width: 60vw;
-    height: 60vw;
-  }
-  .card img {
-    width: 60vw;
-    height: 60vw;
-  }
-  h2 {
-    padding-left: 3rem;
-  }
-}
-#projects {
-  margin-top: 200px;
-}
-
-h2 {
-  font-size: 30px;
-  font-family: "Anton", sans-serif;
-  padding-left: 5rem;
-  font-weight: 400;
+  color: var(--black);
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: var(--textBlack);
 }
 
 .cards {
@@ -391,7 +304,7 @@ a {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  border: 1px solid black;
+  color: var(--black);
 }
 .card img {
   -o-object-fit: cover;
@@ -465,11 +378,11 @@ a {
 #about img {
   height: 600px;
   --s: 10px; /* control the size */
-  padding: var(--s);
+  padding: var(--);
   border: calc(2 * var(--s)) solid rgba(0, 0, 0, 0);
-  outline: 1px solid #000;
+  outline: 1px solid var(--black);
   outline-offset: calc(-1 * var(--s));
-  background: conic-gradient(from 90deg at 1px 1px, rgba(0, 0, 0, 0) 25%, #000 0);
+  background: conic-gradient(from 90deg at 1px 1px, rgba(0, 0, 0, 0) 25%, var(--black) 0);
 }
 #about article {
   height: 600px;
@@ -478,9 +391,9 @@ a {
   --s: 10px; /* control the size */
   padding: var(--s);
   border: calc(2 * var(--s)) solid rgba(0, 0, 0, 0);
-  outline: 1px solid #000;
+  outline: 1px solid var(--black);
   outline-offset: calc(-1 * var(--s));
-  background: conic-gradient(from 90deg at 1px 1px, rgba(0, 0, 0, 0) 25%, #000 0);
+  background: conic-gradient(from 90deg at 1px 1px, rgba(0, 0, 0, 0) 25%, var(--black) 0);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -489,10 +402,14 @@ a {
   padding-left: 5rem;
   padding-right: 5rem;
   flex-direction: column;
+  color: var(--black);
+}
+#about article h2 {
+  color: var(--black);
 }
 #about article a {
-  font-family: "Anton", sans-serif;
-  font-weight: 400;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 700;
   width: 100%;
   text-align: start;
   font-size: 30px;
@@ -591,12 +508,84 @@ a {
     padding-bottom: 2rem;
   }
 }
+#skills h2 {
+  color: var(--black);
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 700;
+}
+
+#experience {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  margin: 10rem;
+  color: var(--black);
+}
+#experience h5 {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0;
+}
+#experience p {
+  font-family: "PT Sans Narrow", sans-serif;
+  color: var(--blue);
+}
+
+.blue {
+  color: var(--blue);
+}
+
+.waterblue {
+  color: var(--waterblue);
+}
+
+.pink {
+  color: var(--pink);
+}
+
+.green {
+  color: var(--green);
+}
+
+.brown {
+  color: var(--brown);
+}
+
+.yellow {
+  color: var(--yellow);
+}
+
+:root {
+  --blue:rgb(30, 42, 211);
+  --waterblue:rgba(0, 89, 255, 0.904);
+  --pink:rgb(134, 64, 167);
+  --green:rgba(13, 126, 28, 0.973);
+  --brown:rgb(160, 114, 71);
+  --yellow:rgb(156, 156, 26);
+  --background: #DDDDDD;
+  --backgroundNav:#DDDDDD;
+  --hover: #DA0037;
+  --black: black;
+  --white: #FFFFFF;
+  --border-shadow:rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 1px 2px 2px 1px;
+}
+
+.darkmode {
+  --background: #424242;
+  --backgroundNav:#252525;
+  --hover: #DA0037;
+  --black: #FFFFFF;
+  --white: black;
+  --border-shadow: rgba(29, 28, 28, 0.671) 0px 2px 5px 0px, rgba(204, 204, 204, 0.945) 1px 2px 2px 1px;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #DDDDDD;
+  background-color: var(--background);
   margin: 0;
   padding: 0;
   overflow-x: hidden;

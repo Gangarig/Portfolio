@@ -1,7 +1,3 @@
-// Fonts and Color imported here
-@import "../fonts_and_colors/colors";
-@import "../fonts_and_colors/fonts";
-
 
 nav {
     display: flex;
@@ -12,49 +8,54 @@ nav {
     align-items: baseline;
     position: sticky;
     top: 0;
-    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    box-shadow: var(--border-shadow);
     z-index: 2;
-    background-color: $background;
+    background-color: var(--backgroundNav);
+    #sun{
+        cursor: pointer;
+    }
     
 }
 nav ul li {
     list-style: none;
-    text-decoration: underline 1px;
+
 }
 nav ul li a {
     list-style: none;
-    text-decoration: underline 1px;
-    color: $textBlack;
-}
-.brandName{
+    color: var(--black);
 
 }
+
 .links{
     display: flex;
     justify-content: flex-start;
     margin: 0;
     padding: 0;
     width: 30vw;
-    font-size: 20px;   
+    font-size: 25px;   
     gap: 10px;
     padding-left: 2rem;
+    li a {
+        text-decoration: none;
+    }
 }
 .logos{
     display: flex;
     justify-content: space-around;
-    margin: 0;
+    margin: 0; 
     padding: 0;
     width: 30vw;
     justify-content: flex-end;
-    font-size: 22px;
-    gap: 5px;
+    font-size: 25px;
+    gap: 10px;
     padding-right: 2rem;
     li a:hover, li a:focus {
-        color: $hover;
+        color: var(--hover);
     }
 }   
 .brandName {
-    font-size: 27px;
+    font-size: 30px;
+    color: var(--black);
 }
 .hamburger {
     display: none;
@@ -64,21 +65,24 @@ nav ul li a {
 }
 
 
-@media screen and (max-width:1366) {
+@media screen and (max-width:1366px) {
     .links{
         font-size: 18px;   
         gap: 10px;
         padding-left: 20px;
     }
     .brandName {
-        font-size: 23px;
+        font-size: 15px;
     }
 }
 @media screen and (max-width:1024px) {
     nav{
-        color: $textWhite;
-        background-color: $backgroundNav;
+        color: var(--white);
+        background-color: var(--backgroundNav);
         height: 70px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: rgba(29, 28, 28, 0.671) 0px 2px 5px 0px, rgba(204, 204, 204, 0.945) 0px 1px 1px 0px;
     }
     .logos{
         display: none;
@@ -91,12 +95,14 @@ nav ul li a {
         padding: 0;
     }
     .brandName {
-        top: 1rem;
+        top: 1.5rem;
         left: 1rem;
-        font-size: 30px;
+        font-size: 20px;
         position: absolute;
         padding: 0;
-        margin: 0;
+        margin: 0; 
+        z-index: 2;
+        color: var(--black);
     }
     .hamburger {
         position: absolute;
@@ -107,7 +113,8 @@ nav ul li a {
         border: none;
         background-color: transparent;
         cursor: pointer;
-        color: $textWhite;
+        color: var(--black);
+        z-index: 2;
     }
     button:focus, button:hover {
         scale: 1.1;
@@ -123,33 +130,34 @@ nav ul li a {
         align-items: center;
         font-size: 25px;
         font-family: $mainFont;
-        transition: 0.2s;
+        transition: .5s;
         opacity: 0;
-        overflow: hidden;
         margin: 0;
         padding: 0;
         height: 0;
-        ul li{
-            text-align: center;
-            transition: 0.5;
-            opacity: 0;
-            
 
-        }
-        a {
-            color: $textWhite;
+        .link{
+            color: var(--black);
             text-decoration: none;
+        }
+        .link:hover , .link:focus {
+            background-color: var(--backgroundNav) ;
+            border-radius: 5%;
+            color: var(--textBlack);
         }
         .icons {
             display: flex;
             gap: 10px;
             justify-content: center;
             align-items: center;
+            li a {
+                color: var(--black);
+            }
             cursor: pointer;
-            i:hover , i:focus {
-                color: $hover;
+            li a:hover , li a:focus {
+                color: var(--hover);
                 scale: 1.1;
-                transition: 0.2s;
+                transition: .2s;
             }
         }
 
@@ -158,9 +166,12 @@ nav ul li a {
     .active{
         padding-top: 50px;
         opacity: 1;
-        color: $textWhite;
+        color: var(--white);
+        transition: .5s;
         height: 250px;
-        background-color: $backgroundNav;
+        background-color: var(--backgroundNav);
+        border-radius: 10px;
+        box-shadow: rgba(29, 28, 28, 0.671) 0px 2px 5px 0px, rgba(204, 204, 204, 0.945) 0px 1px 1px 0px;
         
     }
 
