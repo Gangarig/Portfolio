@@ -11,11 +11,15 @@ nav {
     box-shadow: var(--border-shadow);
     z-index: 2;
     background-color: var(--backgroundNav);
-    #sun{
+    #sun1{
         cursor: pointer;
+        position: absolute;
+        top: 10rem;
+        left: 1rem;
     }
     
 }
+
 nav ul li {
     list-style: none;
 

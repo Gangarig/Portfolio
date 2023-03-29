@@ -25,17 +25,21 @@ $color5:#2b2b2b;
 
 
 :root {
-    --blue:rgb(83, 94, 243);
-    --waterblue:rgb(75, 130, 231);
-    --pink:rgb(134, 64, 167);
-    --green:rgba(13, 126, 28, 0.973);
-    --brown:rgb(160, 114, 71);
-    --yellow:rgb(156, 156, 26);
-    --background :   #DDDDDD;
-    --backgroundNav :#DDDDDD;
-    --hover :        #DA0037;
-    --black :       black;
-    --white :       #FFFFFF;
+    --blue:             #378dd6;
+    --darkblue :                  ;
+    --waterblue:        #9cdcf1d7;
+    --pink:             #d65dccb8;
+    --green:            #4ebc84;
+    --brown:            #ce834a;       
+    --yellow:           #f1f16d;
+    --white2:           #d4d4d4;
+    --background :      #DDDDDD;
+    --backgroundNav :   #DDDDDD;
+    --backgroundCode :  #1e1e1e;
+    --hover :           #DA0037;
+    --black :           black;
+    --white :           #FFFFFF;
+
     --border-shadow:rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 1px 2px 2px 1px;
 }
 .darkmode {
