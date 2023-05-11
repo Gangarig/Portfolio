@@ -1,16 +1,12 @@
 // method brings navbar down by togglin class
 
-let hamburger = document.getElementById('hamburger');
-let responsive = document.getElementById('responsive');
-
-function navbar() {
-    responsive.classList.toggle('active');
-    if (hamburger.classList.contains('bi-list')) {
-        hamburger.classList.replace('bi-list', 'bi-x-lg');
-    } else {
-        hamburger.classList.replace('bi-x-lg', 'bi-list');
+    let hamburger = document.querySelector(".hamburger");
+    hamburger.onclick = navbar; 
+    function navbar(){
+        let navbar = document.querySelector(".nav-bar");
+        navbar.classList.toggle("active");
     }
-}
+
 // dark Mode toggler method
 let sun1 = document.getElementById('sun1');
 let sun2 = document.getElementById('sun2');

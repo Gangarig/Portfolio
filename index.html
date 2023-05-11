@@ -10,44 +10,34 @@
     <link rel="stylesheet" href="scss/style.css">
 </head>
 <body>  
-    <!-- navbar is here -->
-    <nav class="navbar" id="home">
-        <ul class="links"> 
-            <li><a href="#">Home</a></li> 
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#about">About</a></li>  
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <h2 class="brandName">&lt;h1&gt;Ganaa&lt;/h1&gt;
-        </h2>
-        <ul class="logos">
-                        <!-- Dark Mode button -->
-            <li><a id="sun1" class="bi bi-brightness-high-fill"></a></li> 
-            <li><a href="mailto:gangarign@gmail.com" class="bi bi-envelope"></a></li>
-            <li><a href="https://github.com/Gangarig" class="bi bi-github"></a></li>
-            <li><a href="https://www.linkedin.com/in/gangarig-nyamsuren-338654b1/" class="bi bi-linkedin"></a></li>
-        </ul>
-        <button id="hamburger" onclick="navbar()" class="bi bi-list hamburger "></button>
-        <ul id="responsive" class="responsive">
-            <li><a class="link" href="#">Home</a></li> 
-            <li><a class="link" href="#projects">Projects</a></li>
-            <li><a class="link" href="#about">About</a></li>  
-            <li><a class="link" href="#skills">Skills</a></li>
-            <li><a class="link" href="#experience">Experience</a></li>
-            <li><a class="link" href="#contact">Contact</a></li>
-            <div class="icons">
-                <li><a id="sun2" class="bi bi-brightness-high-fill"></a></li> 
-                <li><a href="mailto:gangarign@gmail.com" class="bi bi-envelope"></a></li>
-                <li><a href="https://github.com/Gangarig" class="bi bi-github"></a></li>
-                <li><a href="https://www.linkedin.com/in/gangarig-nyamsuren-338654b1/" class="bi bi-linkedin"></a></li>
-            </div>
-        </ul>
-    </nav>
+    <div class="nav">
+        <div class="logo">Ganaa</div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="#home" onclick="navbar()" > Home</a>
+                </li>
+                <li>
+                    <a href="#projects" onclick="navbar()" > Projects</a>
+                </li>
+                <li>
+                    <a href="#about" onclick="navbar()" > About</a>
+                </li>
+                <li>
+                    <a href="#experience" onclick="navbar()" > Skills</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 
+    <!-- <a id="sun1" class="bi bi-brightness-high-fill"></a> -->
     <!-- header text is here -->
-   <header>
+   <header id="home">
         <div class="hero" >
             <div>
             <span class="space">H</span>
@@ -90,6 +80,12 @@
         </div>
         <p>Web Developer</p>
         <a href="mailto:gangarign@gmail.com"><button class="button-89" role="button">Contact Me</button></a>
+        <div class="icons">
+        <a href="" class="icon "></a>
+        <a href="" class="icon "></a>
+        <a href="" class="icon "></a>
+        </div>
+
     </header>
     <!-- header ends here -->
 
@@ -99,18 +95,18 @@
         <div class="cards">
             <div class="card" onclick="window.open('https://www.chinbat-jagdar.com','_blank')">
                 <span >Art gallery</span>
-                <img src="/assets/logo/web.svg" alt="">
+                <img class="frame" src="/assets/images/artGallery.png" alt="">
             </div>
             <div class="card"><span >I am a placeholder</span>
-                <img src="/assets/logo/web.svg" alt=""></div>
+                <img class="frame" src="/assets/logo/web.svg" alt=""></div>
             <div class="card"><span >I am a placeholder</span>
-                <img src="/assets/logo/web.svg" alt=""></div>
+                <img class="frame" src="/assets/logo/web.svg" alt=""></div>
             <div class="card"><span >I am a placeholder</span>
-                <img src="/assets/logo/web.svg" alt=""></div>
+                <img class="frame" src="/assets/logo/web.svg" alt=""></div>
             <div class="card"><span >I am a placeholder</span>
-                <img src="/assets/logo/web.svg" alt=""></div>
+                <img class="frame" src="/assets/logo/web.svg" alt=""></div>
             <div class="card"><span >I am a placeholder</span>
-                <img src="/assets/logo/web.svg" alt=""></div>
+                <img class="frame" src="/assets/logo/web.svg" alt=""></div>
 
         </div>
     </section>
@@ -131,20 +127,20 @@
     </section>
     <!-- about ends here -->
 
-
-
-    <!-- skills starts here -->
-    <section id="skills">
-        <a href="#skills"><h2>&lt;h2&gt;#SKILLS&lt;/h2&gt;</h2></a>
-    </section>
-    <!-- skills ends here -->
-
-
-
     <!-- Experience starts here -->
     <section id="experience">
         <div class="container">
-        <h2 class="white">#EXPERIENCE</h2>
+        <h2 class="white">#SKILLS</a></h2>
+        <h5>
+            <span class="pink">@import</span> 
+            <span class="yellow">{</span> 
+            <span class="waterblue">component</span> 
+            <span class="yellow">}</span> 
+            <span class="pink">from</span> 
+            <span class="brown">'@programming/syntaxes' ;</span>
+        </h5>
+        
+        <h2 class="white"><a href="#experience">#EXPERIENCE</a></h2>
         <h5>
             <span class="pink">@import</span> 
             <span class="yellow">{</span> 
@@ -255,6 +251,7 @@
                 <span class="yellow">}</span>
             </p>
         </div>
+        
     </section>
     <!-- experience ends here -->
 

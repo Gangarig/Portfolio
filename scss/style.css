@@ -1,179 +1,105 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=PT+Sans+Narrow:wght@400;700&display=swap");
-nav {
+.nav {
+  width: 100%;
+  height: 80px;
+  background-color: var(--backgrounddark);
   display: flex;
-  width: 100vw;
+  align-items: center;
   justify-content: space-between;
-  font-family: "PT Sans Narrow", sans-serif;
-  justify-content: baseline;
-  align-items: baseline;
+  padding: 0 60px;
   position: sticky;
   top: 0;
-  box-shadow: var(--border-shadow);
   z-index: 2;
-  background-color: var(--backgroundNav);
-}
-nav #sun1 {
-  cursor: pointer;
-  position: absolute;
-  top: 10rem;
-  left: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
-nav ul li {
-  list-style: none;
-}
-
-nav ul li a {
-  list-style: none;
-  color: var(--black);
-}
-
-.links {
-  display: flex;
-  justify-content: flex-start;
-  margin: 0;
-  padding: 0;
-  width: 30vw;
-  font-size: 25px;
-  gap: 10px;
-  padding-left: 2rem;
-}
-.links li a {
-  text-decoration: none;
-}
-
-.logos {
-  display: flex;
-  justify-content: space-around;
-  margin: 0;
-  padding: 0;
-  width: 30vw;
-  justify-content: flex-end;
-  font-size: 25px;
-  gap: 10px;
-  padding-right: 2rem;
-}
-.logos li a:hover, .logos li a:focus {
-  color: var(--hover);
-}
-
-.brandName {
+.logo {
   font-size: 30px;
-  color: var(--black);
+  font-weight: bold;
+  color: var(--white);
 }
 
 .hamburger {
   display: none;
 }
 
-.responsive {
-  display: none;
+.nav-bar ul {
+  display: flex;
 }
 
-@media screen and (max-width: 1366px) {
-  .links {
-    font-size: 18px;
-    gap: 10px;
-    padding-left: 20px;
-  }
-  .brandName {
-    font-size: 15px;
+.nav-bar ul li a {
+  display: block;
+  color: var(--white);
+  font-size: 25px;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: 0.2s;
+  margin: 0 5px;
+}
+
+.nav-bar ul li a:hover {
+  color: var(--black);
+  background: var(--background);
+}
+
+@media only screen and (max-width: 1320px) {
+  .nav {
+    padding: 0 45px;
   }
 }
-@media screen and (max-width: 1024px) {
-  nav {
-    color: var(--white);
-    background-color: var(--backgroundNav);
-    height: 70px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    box-shadow: rgba(29, 28, 28, 0.671) 0px 2px 5px 0px, rgba(204, 204, 204, 0.945) 0px 1px 1px 0px;
+@media only screen and (max-width: 1100px) {
+  .nav {
+    padding: 0 30px;
   }
-  .logos {
-    display: none;
-    margin: 0;
-    padding: 0;
-  }
-  .links {
-    display: none;
-    margin: 0;
-    padding: 0;
-  }
-  .brandName {
-    top: 1.5rem;
-    left: 1rem;
-    font-size: 20px;
-    position: absolute;
-    padding: 0;
-    margin: 0;
+}
+@media only screen and (max-width: 900px) {
+  .nav {
+    position: sticky;
+    top: 0;
     z-index: 2;
-    color: var(--black);
   }
   .hamburger {
-    position: absolute;
-    top: 1.3rem;
-    right: 1rem;
     display: block;
-    font-size: 30px;
-    border: none;
-    background-color: transparent;
     cursor: pointer;
-    color: var(--black);
-    z-index: 2;
   }
-  button:focus, button:hover {
-    scale: 1.1;
+  .hamburger .line {
+    width: 30px;
+    height: 3px;
+    background: var(--white);
+    margin: 6px 0;
   }
-  button:active {
-    scale: 0.9;
-  }
-  .responsive {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  .nav-bar {
+    height: 0px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
     width: 100vw;
-    align-items: center;
-    font-size: 25px;
-    font-family: "PT Sans Narrow", sans-serif;
+    background-color: var(--backgrounddark);
+    transition: 0.5s;
+    overflow: hidden;
+  }
+  .nav-bar ul {
+    display: block;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 30px auto 0 auto;
+    text-align: center;
     transition: 0.5s;
     opacity: 0;
-    margin: 0;
-    padding: 0;
-    height: 0;
   }
-  .responsive .link {
-    color: var(--black);
-    text-decoration: none;
+  .navbar ul li a {
+    margin-bottom: 12px;
+    font-size: 15px;
   }
-  .responsive .link:hover, .responsive .link:focus {
-    background-color: var(--backgroundNav);
-    border-radius: 5%;
-    color: var(--textBlack);
+  .logo {
+    font-size: 25px;
   }
-  .responsive .icons {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+  .nav-bar.active {
+    height: 330px;
   }
-  .responsive .icons li a {
-    color: var(--black);
-  }
-  .responsive .icons li a:hover, .responsive .icons li a:focus {
-    color: var(--hover);
-    scale: 1.1;
-    transition: 0.2s;
-  }
-  .active {
-    padding-top: 50px;
+  .nav-bar.active ul {
     opacity: 1;
-    color: var(--white);
-    transition: 0.5s;
-    height: 250px;
-    background-color: var(--backgroundNav);
-    border-radius: 10px;
-    box-shadow: rgba(29, 28, 28, 0.671) 0px 2px 5px 0px, rgba(204, 204, 204, 0.945) 0px 1px 1px 0px;
   }
 }
 header {
@@ -260,8 +186,9 @@ p {
 }
 @media screen and (max-width: 587px) {
   .hero {
-    font-size: 18px;
-    line-height: 20px;
+    width: 90vw;
+    font-size: 25px;
+    line-height: 25px;
   }
   p {
     font-size: 15px;
@@ -324,12 +251,21 @@ a {
   font-weight: 700;
 }
 
+.frame {
+  --s: 10px; /* control the size */
+  padding: var(--s);
+  border: calc(2 * var(--s)) solid rgba(0, 0, 0, 0);
+  outline: 1px solid #000;
+  outline-offset: calc(-1 * var(--s));
+  background: conic-gradient(from 90deg at 1px 1px, rgba(0, 0, 0, 0) 25%, #000 0);
+}
+
 .card:hover, .card:focus {
   border: none;
 }
 .card:hover img, .card:focus img {
   opacity: 0;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 .card:hover span, .card:focus span {
   opacity: 1;
@@ -524,6 +460,7 @@ a {
   margin: 5rem;
   background-color: var(--backgroundCode);
   border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 #experience .container {
   margin: 50px;
@@ -631,8 +568,9 @@ a {
   --yellow: #f1f16d;
   --white2: #d4d4d4;
   --background: #DDDDDD;
+  --backgrounddark: #424242;
   --backgroundNav: #DDDDDD;
-  --backgroundCode: #1e1e1e;
+  --backgroundCode: #3a3838;
   --hover: #DA0037;
   --black: black;
   --white: #FFFFFF;
@@ -652,9 +590,22 @@ html {
   scroll-behavior: smooth;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans Narrow", sans-serif;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
 body {
   background-color: var(--background);
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+}
+
+.hover {
+  color: var(--hover);
 }/*# sourceMappingURL=style.css.map */
