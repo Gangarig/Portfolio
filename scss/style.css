@@ -458,7 +458,7 @@ a {
   flex-direction: column;
   color: var(--black);
   margin: 5rem;
-  background-color: var(--backgroundCode);
+  background-color: var(--background2);
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
@@ -468,7 +468,7 @@ a {
 #experience h5 {
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 30px;
-  font-weight: 400;
+  font-weight: 500;
   margin: 0;
   margin-left: 2rem;
   color: var(--white);
@@ -478,6 +478,7 @@ a {
   color: var(--blue);
   margin-left: 2rem;
   font-size: 25px;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 1200px) {
@@ -559,15 +560,16 @@ a {
 }
 
 :root {
-  --blue: #378dd6;
+  --blue: #0f538f;
   --darkblue: ;
-  --waterblue: #9cdcf1d7;
-  --pink: #d65dccb8;
-  --green: #4ebc84;
-  --brown: #ce834a;
-  --yellow: #f1f16d;
+  --waterblue: #0f9499e0;
+  --pink: #a30a96af;
+  --green: #0b8b49c9;
+  --brown: #bd6420;
+  --yellow: #bbbb17;
   --white2: #d4d4d4;
-  --background: #DDDDDD;
+  --background: #dfe0e1;
+  --background2: #dfe0e1;
   --backgrounddark: #424242;
   --backgroundNav: #DDDDDD;
   --backgroundCode: #3a3838;

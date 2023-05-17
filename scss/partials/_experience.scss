@@ -3,7 +3,7 @@
     flex-direction: column;
     color: var(--black);
     margin: 5rem;
-    background-color: var(--backgroundCode);
+    background-color: var(--background2);
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     .container{
@@ -12,7 +12,7 @@
     h5 {
         font-family: $mainFont;
         font-size: 30px;
-        font-weight: 400;
+        font-weight: 500;
         margin: 0;
         margin-left: 2rem;
         color: var(--white);
@@ -22,6 +22,7 @@
         color: var(--blue);
         margin-left: 2rem;
         font-size: 25px;
+        font-weight: 500;
     }
     
 }
