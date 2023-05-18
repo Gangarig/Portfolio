@@ -8,11 +8,9 @@ $titleFont: 'Anton', sans-serif;
 @import "partials/navbar";
 @import "partials/header";
 @import "partials/projects";
-@import "partials/about";
 @import "partials/skills";
-@import "partials/experience";
 @import "partials/contact";
-@import "partials/footer";
+
 
 
 //for Dark mode 
@@ -26,32 +24,19 @@ $color5:#2b2b2b;
 
 :root {
     --blue:             #0f538f;
-    --darkblue :                  ;
     --waterblue:        #0f9499e0;
     --pink:             #a30a96af;
     --green:            #0b8b49c9;
     --brown:            #bd6420;       
     --yellow:           #bbbb17;
     --white2:           #d4d4d4;
-    --background :      #dfe0e1;
-    --background2 :     #dfe0e1;
-    --backgrounddark :  #424242;
-    --backgroundNav :   #DDDDDD;
-    --backgroundCode :  #3a3838;
-    --hover :           #DA0037;
+    --bgDark :          #2b2b2b;
+    --bg:               #dfe0e1;
     --black :           black;
     --white :           #FFFFFF;
+    --text: black;
+}
 
-    --border-shadow:rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 1px 2px 2px 1px;
-}
-.darkmode {
-    --background :   #424242;
-    --backgroundNav :#252525;
-    --hover :        #DA0037;
-    --black :          #FFFFFF;
-    --white :          black;
-    --border-shadow : rgba(29, 28, 28, 0.671) 0px 2px 5px 0px, rgba(204, 204, 204, 0.945) 1px 2px 2px 1px;
-}
 html {
     scroll-behavior: smooth;
 }
@@ -64,7 +49,7 @@ html {
     text-decoration: none;
 }
 body {
-    background-color: var(--background);
+    background-color: var(--bg);
     margin: 0;
     padding: 0;
     overflow-x: hidden;
