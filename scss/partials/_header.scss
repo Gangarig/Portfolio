@@ -1,103 +1,316 @@
-
 header {
     height: 80vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
-    flex-direction: column;
-
-
-}
-.hero {
-    width: 60vw;
-    font-size: 45px;
-    text-align: center;
-    padding-top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    line-height: 50px;
     justify-content: space-evenly;
-    color: var(--text);
-
-    div{ 
-        span {
-        font-family: $titleFont;
-        transition: transform 0.2s ease;
-    }   span:hover {
-        color: var(--hover);
-        transform: translateY(-5px);
-        scale: 2;
+    margin-top: 3rem;
+}
+.personalLinks2{
+    display: none;
+}
+.btn2{
+    display: none;
+}
+    .content {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 40vw;
+    .btn1{
+        font-family: $mainFont;
+        font-weight: 600;
+        font-size: 1.5rem;
     }
-}
-}
-
-p {
-    font-size: 30px;
-    font-family: $mainFont;
-    color: var(--text);
-}
-.space{
-    margin-left: 30px;
-}
-
-/* CSS */
-.button-89 {
-  --b: 3px;   /* border thickness */
-  --s: .45em; /* size of the corner */
-  --color: var(--black);
-    font-family: $mainFont;
-  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
-  color: var(--color);
-  --_p: var(--s);
-  background:
-    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
-    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
-  transition: .3s linear, color 0s, background-color 0s;
-  outline: var(--b) solid #0000;
-  outline-offset: .6em;
-  font-size: 16px;
-
-  border: 0;
-
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.button-89:hover,
-.button-89:focus-visible{
-  --_p: 0px;
-  outline-color: var(--color);
-  outline-offset: .05em;
-}
-
-.button-89:active {
-  background: var(--color);
-  color: #fff;
-}
-
-@media screen and (max-width:720px) {
-    .hero {
-        font-size: 35px;
-        line-height: 37px;
-    }
-}
-
-@media screen and (max-width:587px) {
-    .hero {
-        width: 90vw;
-        font-size: 25px;
-        line-height: 25px;
+    h2 {
+        width: 30vw;
+        margin: 0;
+        padding: 0;
+        font-size: 3rem;
+        font-family: 2.5rem;
+        line-height: 3rem;
+        font-family: $mainFont;
+        font-weight: bold;
     }
     p {
-        font-size: 15px;
         font-family: $mainFont;
+        font-size: 2rem;
+        line-height: 2rem;
+        width: 40vw;
+        
     }
-    .space{
-        margin-left: 15px;
+    .personalLinks1{
+        display: flex;
+        width: 40vw;
+        justify-content: space-between;
+        a{
+            color: var(--text);
+            font-size: 3rem;
+            
+        }
+        a:focus, a:hover {
+            transition: 0.2s;
+            scale: 1.1;
+            color: var(--hover);
+        }
     }
+    }
+    .img-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            height: 70vh;
+            width: auto;
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+    
+@media (max-width:1400px) {
+
+        .content {
+            h2 {
+                font-size: 2.7rem;
+                line-height: 2.7rem;
+            }
+            p {
+                font-size: 1.8rem;
+                line-height: 1.8rem;
+            }
+        }
+        .img-container{
+            img{
+                width: auto;
+                height: 60vh;
+            }
+        }
+        
+}
+@media (max-width:1200px) {
+
+    .content {
+        gap: 30px;
+        h2 {
+            font-size: 2rem;
+            line-height: 2rem;
+        }
+        p {
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+        }
+    }
+    .img-container{
+        img{
+            width: auto;
+           
+        }
+    }
+    
+}   
+@media (max-width:1000px) {
+
+    .content {
+        gap: 20px;
+        h2 {
+            font-size: 1.7rem;
+            line-height: 1.7rem;
+        }
+        p {
+            font-size: 1.3rem;
+            line-height: 1.3rem;
+        }
+    }
+    .img-container{
+        img{
+            width: auto;
+         
+        }
+    }
+    
+}
+
+@media (max-width:900px) {
+    header {
+        flex-direction: column-reverse;
+        height: 100vh;
+        width: 100vw;
+        margin-top: 5rem;
+    }
+    .content {
+        width: 90vw;
+        padding-top: 10rem;
+        h2 {
+            width: 70vw;
+            font-size: 2rem;
+            line-height: 2rem;
+            text-align: center;
+            
+        }
+        p {
+            width: 70vw;
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+        }
+        .personalLinks1{
+            display: none;
+        }
+        .btn1{
+            display: none;
+        }
+    }
+    .img-container{
+        width: 100vw;
+        display: flex;
+        justify-content: space-evenly;
+        height: 100vh;
+
+        #btn2 {
+            display: block;
+            font-size: 1.5rem;
+            font-family: $mainFont;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+        img{
+            width: auto;
+            height: 60vh;
+        }
+    }
+    
+    }
+    
+    @media (max-width:800px) {
+
+        .content {
+            gap: 15px;
+            h2 {
+                font-size: 1.5rem;
+                line-height: 1.5rem;
+            }
+            p {
+                font-size: 1rem;
+                line-height: 1rem;
+            }
+        }
+        .img-container{
+            #btn2{
+                font-size: 1.3rem;
+            }
+            img{
+                width: auto;
+                height: 50vh;
+            }
+        }
+        
+    }
+    @media (max-width:600px) {
+
+        .content {
+            gap: 15px;
+            h2 {
+                font-size: 1.5rem;
+                line-height: 1.5rem;
+            }
+            p {
+                font-size: 1rem;
+                line-height: 1rem;
+            }
+        }
+        .img-container{
+            #btn2{
+                font-size: 1rem;
+            }
+            img{
+                width: auto;
+                height: 50vh;
+            }
+        }
+        
+    }
+
+
+
+    @media (max-width:500px) {
+
+        .content {
+            gap: 15px;
+            h2 {
+                font-size: 1.5rem;
+                line-height: 1.5rem;
+            }
+            p {
+                font-size: 1rem;
+                line-height: 1rem;
+            }
+        }
+        .img-container{
+            #btn2{
+                font-size: .7rem;
+                line-height: 1rem;
+            }
+            img{
+                width: auto;
+                height: 30vh;
+            }
+        }
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// button animation
+.contactBtn {
+    --b: 3px;   /* border thickness */
+    --s: .45em; /* size of the corner */
+    --color: var(--black);
+    font-family: $mainFont;
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background: conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 16px;
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.contactBtn:hover,
+.contactBtn:focus-visible {
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+}
+
+.contactBtn:active {
+    background: var(--color);
+    color: #fff;
 }
