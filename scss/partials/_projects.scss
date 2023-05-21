@@ -1,7 +1,17 @@
 
 #projects {
     margin-top: 200px;
-
+    width: 100vw;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (min-width:1024px) {
+        max-width: 1500px;
+    }
+    @media (min-width:1500px) {
+        max-width: 2000px;
+    }
 }
 h2 {
     font-size: 30px;
@@ -25,8 +35,8 @@ a{
 }
 .card {
     z-index: 1;
-    width: 40vw;
-    height: 40vw;
+    width: 650px;
+    height: 650px;
     font-size: 20px;
     font-weight: bold;
     font-family: $mainFont;
@@ -37,8 +47,8 @@ a{
     color: var(--black);
     img {
         object-fit: cover;
-        height: 40vw;
-        width: 40vw;
+        height: 650px;
+        width: 650px;
         position: absolute;
         opacity: 1;
     }
@@ -81,7 +91,7 @@ a{
     }
 
   }
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     .cards { 
         grid-template-columns: 1fr ;
         padding-left: 2rem;

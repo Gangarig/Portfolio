@@ -27,30 +27,41 @@
                 <li>
                     <a class="btn" href="#contact" onclick="navbar()" > CONTACT</a>
                 </li>
+                <li class="switchBox">
+                    <!-- Dark theme switch -->
+                    <label class="switch">
+                        <input type="checkbox" onclick="navbar() , darkMode()">
+                        <span class="slider"></span>
+                    </label> 
+                </li>
                 <li class="icons">
                     <a  href="https://www.linkedin.com/in/gangarig-nyamsuren-338654b1/" onclick="navbar()" class=" icon bi bi-linkedin"></a>
                     <a  href="mailto:gangarign@gmail.com" onclick="navbar()" class=" icon bi bi-envelope"></a>
                     <a  href="/assets/files/Resume.pdf" onclick="navbar()" class=" icon bi bi-file-person"></a>
-                </li>
-                <li>
-
+                    <a  href="https://github.com/Gangarig" onclick="navbar()" class=" icon bi bi-github"></a>
                 </li>
             </ul>
         </nav>
     </div>
 
-
-
-    <!-- Dark theme switch -->
-
-    <!-- <a id="sun1" class="bi bi-brightness-high-fill"></a> -->
+    
     <!-- header text is here -->
-   <header id="home">
+    <header>
+        <h1>Hello and welcome to my Portfolio!</h1>
+        <div class="headerContent">
+            <a   href="https://www.linkedin.com/in/gangarig-nyamsuren-338654b1/"  class="icon bi bi-linkedin  link"></a>
+            <a  href="mailto:gangarign@gmail.com"  class=" icon bi bi-envelope link"></a>
+            <a  href="/assets/files/Resume.pdf"  class="icon bi bi-file-person  link"></a> 
+            <a  href="https://github.com/Gangarig" class=" icon bi bi-github"></a>    
+        </div>
+        <a href="#contact" class="contactBtn">CONTACT ME</a>
+    </header>
+   <!-- <header id="home">
         <div class="content">
             <h2>Hello and welcome to my portfolio!</h2>
             <p>I'm a passionate web developer currently gearing up for Techforest and actively accepting freelancing work. I believe in combining creativity and functionality to produce innovative solutions that leave a lasting impression. Creating outstanding online experiences is my passion, and I am dedicated to continually developing my skills as a web developer. If you have any exciting projects or roles available, I would love to hear from you. Let's connect and discuss how we can collaborate to bring your ideas to life.</p>
-                        <!-- icons -->
-            <div class="personalLinks1"> 
+                        icons -->
+            <!-- <div class="personalLinks1"> 
                 <a   href="https://www.linkedin.com/in/gangarig-nyamsuren-338654b1/"  class="icon bi bi-linkedin  link"></a>
                 <a  href="mailto:gangarign@gmail.com"  class=" icon bi bi-envelope link"></a>
                 <a  href="/assets/files/Resume.pdf"  class="icon bi bi-file-person  link"></a>
@@ -60,10 +71,10 @@
         <div class="img-container">
 
             <a id="btn2" href="#contact" class="contactBtn btn2">CONTACT ME</a>
-            <img src="/assets/images/profileSmall.png" alt="Responsive image">
+            <img src="/assets/images/profilesvg.svg" alt="Responsive image">
         </div>
 
-    </header>
+    </header> -->
     <!-- header ends here -->
 
     <!-- projects sections starts here -->
@@ -89,36 +100,40 @@
     <!-- projects section ends here -->
 
     <section id="contact">
-        <div class="container">
             <div id="info">
                 <div class="title">
                     <h2>CONTACT</h2>
                     <p>Thank you for visiting my portfolio! I would love to connect with you. Feel free to reach out through the contact form below. I look forward to hearing from you!</p>
                 </div>
                 <div class="subinfo">
-                    <h2>Address</h2>
+                    <h3>Address</h3>
                     <p> Wien , Austria </p>
-                    <h2>Phone</h2>
+                    <h3>Phone</h3>
                     <p>+43 660 39 11915</p>
-                    <h2>E-mail</h2>
+                    <h3>E-mail</h3>
                     <p>gangarign@gmail.com</p>
                 </div>
             </div>
-            <div id="form">
-                <form action="post">
+            <form action="post">
                     <h2>CONTACT ME</h2>
                     <label for="name">Your Name</label>
                     <input type="text" name="name" id="name" required>
                     <label for="phone">E-Mail</label>
-                    <input type="tel" name="phone" id="phone" required>
+                    <input type="text" name="email" id="email" required>
                     <label for="message">Message</label>
-                    <input type="text" name="message" id="message" required>
+                    <textarea name="message" id="message" cols="40" rows="3"></textarea>
                     <button type="submit" class="submit"> SEND MESSAGE</button>
-                </form>
-            </div>
-        </div>
+            </form>
     </section>
-      
+    <footer>
+        <div class="footerLinks">
+        <a  href="https://www.linkedin.com/in/gangarig-nyamsuren-338654b1/" onclick="navbar()" class=" icon bi bi-linkedin"></a>
+        <a  href="mailto:gangarign@gmail.com" onclick="navbar()" class=" icon bi bi-envelope">
+        <a  href="https://github.com/Gangarig" class=" icon bi bi-github"></a>  
+        </a>
+        </div>
+        <h4>Copyright @ 2023 GANA</h4>
+    </footer>
     <!-- script link is here -->
     <script src="js/index.js"></script>
 
