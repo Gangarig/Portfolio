@@ -309,116 +309,46 @@ header .headerContent {
 }
 
 #projects {
-  margin-top: 200px;
   width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 1rem auto;
 }
-@media (min-width: 1024px) {
-  #projects {
-    max-width: 1500px;
-  }
+#projects h1 {
+  text-align: center;
+  margin-top: 5rem;
 }
-@media (min-width: 1500px) {
-  #projects {
-    max-width: 2000px;
-  }
+#projects h2 {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  text-align: center;
 }
 
-h2 {
-  font-size: 30px;
-  font-family: "Josefin Sans", sans-serif;
-  padding-left: 5rem;
-  font-weight: 700;
-  color: var(--black);
-}
-
-a {
-  text-decoration: none;
-  color: var(--white);
-}
-
-.cards {
+.projectsGrid {
+  max-width: 2000px;
+  margin: 0 auto;
   display: grid;
-  gap: 3rem;
-  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
   place-items: center;
-  padding-left: 4rem;
-  padding-right: 4rem;
 }
 
 .card {
-  z-index: 1;
-  width: 650px;
-  height: 650px;
-  font-size: 20px;
-  font-weight: bold;
-  font-family: "Josefin Sans", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  color: var(--black);
-}
-.card img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 650px;
-  width: 650px;
-  position: absolute;
-  opacity: 1;
-}
-.card span {
-  opacity: 0;
-  font-size: 30px;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 700;
+  background-color: dodgerblue;
+  color: white;
+  padding: 1rem;
+  width: 90%;
 }
 
-.card:hover, .card:focus {
-  border: none;
-}
-.card:hover img, .card:focus img {
-  opacity: 0;
-  transition: 0.2s;
-}
-.card:hover span, .card:focus span {
-  opacity: 1;
-  transition: 0.2s;
+figure img {
+  width: 100%;
 }
 
-@media (max-width: 1235px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  .card {
-    width: 40vw;
-    height: 40vw;
-  }
-  .card img {
-    width: 40vw;
-    height: 40vw;
+@media (min-width: 1024px) {
+  .projectsGrid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (max-width: 900px) {
-  .cards {
-    grid-template-columns: 1fr;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  .card {
-    width: 60vw;
-    height: 60vw;
-  }
-  .card img {
-    width: 60vw;
-    height: 60vw;
-  }
-  h2 {
-    padding-left: 3rem;
+@media (min-width: 1500px) {
+  .projectsGrid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 #skills h2 {
@@ -465,43 +395,45 @@ a {
   flex-direction: column;
   gap: 1rem;
   width: 100vw;
-  min-height: 100vh;
 }
 
 #info {
   max-width: 90%;
   text-align: center;
-  min-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  justify-content: space-evenly;
+  margin-top: 2rem;
 }
 #info .title {
-  min-height: 13rem;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
   max-width: 691.2px;
+  height: 30%;
 }
 #info .subinfo {
-  min-height: 13rem;
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: space-evenly;
   flex-direction: column;
   max-width: 691.2px;
+  height: 30%;
 }
 
 form {
+  min-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90%;
-  min-height: 500px;
+  width: 85%;
   justify-content: space-evenly;
   box-shadow: var(--contactShadow);
-  border-radius: 5px;
+  border-radius: 3%;
 }
 form label {
   width: 80%;
@@ -552,16 +484,21 @@ footer .footerLinks h4 {
 @media (min-width: 1024px) {
   #contact {
     flex-direction: row;
-    min-height: 700px;
     justify-content: space-evenly;
     max-width: 1500px;
+    height: 100vh;
   }
   #info {
     justify-content: space-between;
     max-width: 500px;
+    height: 70%;
+  }
+  #info .subinfo {
+    margin-bottom: 5rem;
   }
   form {
     max-width: 500px;
+    height: 70%;
   }
   footer h4 {
     height: 2rem;
@@ -571,7 +508,6 @@ footer .footerLinks h4 {
 @media (min-width: 1500px) {
   #contact {
     flex-direction: row;
-    min-height: 800px;
     justify-content: space-evenly;
     max-width: 2000px;
   }

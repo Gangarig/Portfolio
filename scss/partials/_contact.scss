@@ -32,42 +32,43 @@
     flex-direction: column;
     gap: 1rem; 
     width: 100vw;
-    min-height: 100vh;
 }
 #info {
     max-width: 90%;
     text-align: center;
-    min-height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    height: 100vh;
+    justify-content: space-evenly;
+    margin-top: 2rem;
     .title {
-        min-height: 13rem;
         display: flex;
         justify-content: space-evenly;
         flex-direction: column;
         max-width: 691.2px;
+        height: 30%;
     }
     .subinfo {
-        min-height: 13rem;
         display: flex;
-        justify-content: space-around;
+        align-items: center;
+        justify-content: space-evenly;
         flex-direction: column;
         max-width: 691.2px;
+        height: 30%;
     }
 }
 form {
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90%;
-    min-height: 500px;
+    width: 85%;
     justify-content: space-evenly;
     box-shadow: var(--contactShadow);
-    border-radius: 5px;
+    border-radius: 3%;
     label {
         width: 80%;
         border: none;
@@ -117,17 +118,25 @@ footer {
 @media (min-width:1024px) {
     #contact {
         flex-direction: row;
-        min-height: 700px;
         justify-content: space-evenly;
         max-width: 1500px;
+        height: 100vh;
     }
 
     #info {      
         justify-content: space-between;
         max-width: 500px;
+        height: 70%;
+        .title {
+
+        }
+        .subinfo{
+            margin-bottom: 5rem;
+        }
     }
     form{
         max-width: 500px;
+        height: 70%;
     }
     footer {
         h4 {
@@ -139,7 +148,6 @@ footer {
 @media (min-width:1500px) {
     #contact {
         flex-direction: row;
-        min-height: 800px;
         justify-content: space-evenly;
         max-width: 2000px;
     }
