@@ -256,24 +256,10 @@ input:hover:checked + .slider:before {
 
 header {
   height: 100vh;
+  width: 90vw;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 2000px;
   flex-direction: column;
-  margin: 2rem auto;
-}
-header h1 {
-  line-height: 2rem;
-  text-align: center;
-  padding-bottom: 250px;
-}
-header .headerContent {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  width: 200px;
-  justify-content: space-around;
 }
 
 .contactBtn {
@@ -310,15 +296,32 @@ header .headerContent {
 
 #projects {
   width: 100vw;
-  margin: 1rem auto;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 #projects h1 {
   text-align: center;
-  margin-top: 5rem;
+  font-size: 1.3rem;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #projects h2 {
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  text-align: center;
+  font-size: 1.3rem;
+  width: 80%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#projects a {
+  font-size: 1.3rem;
   text-align: center;
 }
 
@@ -328,27 +331,64 @@ header .headerContent {
   display: grid;
   gap: 1rem;
   place-items: center;
+  width: 100vw;
 }
 
 .card {
-  background-color: dodgerblue;
-  color: white;
-  padding: 1rem;
-  width: 90%;
+  border-radius: 5px;
+  width: 90vw;
+  height: 50vw;
 }
 
-figure img {
-  width: 100%;
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  width: 90vw;
+  height: 50vw;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .projectsGrid {
     grid-template-columns: repeat(2, 1fr);
+    width: 95vw;
+  }
+  .card {
+    width: 46vw;
+    height: 30vw;
+  }
+  img {
+    width: 46vw;
+    height: 30vw;
+  }
+}
+@media (min-width: 1024px) {
+  .projectsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    width: 95vw;
+    height: 60vh;
+  }
+  .card {
+    width: 30vw;
+    height: 20vw;
+  }
+  img {
+    width: 30vw;
+    height: 20vw;
   }
 }
 @media (min-width: 1500px) {
-  .projectsGrid {
-    grid-template-columns: repeat(3, 1fr);
+  #projects {
+    max-width: 2000px;
+    height: 1000px;
+  }
+  #projects .projectsGrid {
+    max-width: 1600px;
+    place-items: center;
+  }
+  #projects .projectsGrid .card {
+    width: 500px;
+    height: 300px;
   }
 }
 #skills h2 {
@@ -523,6 +563,17 @@ footer .footerLinks h4 {
     text-align: center;
   }
 }
+#experience {
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#experience p {
+  text-align: center;
+}
+
 .darkMode {
   --bgDark: #2b2b2b;
   --bg: #dfe0e1;
@@ -539,7 +590,7 @@ footer .footerLinks h4 {
   --text: #FFFFFF;
   --black: #FFFFFF;
   --white: #2b2b2b;
-  --navShadow: rgba(255, 255, 255, 0.09) 0px 2px 1px, rgba(255, 255, 255, 0.09) 0px 4px 2px, rgba(255, 255, 255, 0.09) 0px 8px 4px, rgba(255, 255, 255, 0.09) 0px 16px 8px, rgba(255, 255, 255, 0.09) 0px 32px 16px;
+  --navShadow: rgba(255, 255, 255, 0.09) 0px 1px .5px, rgba(255, 255, 255, 0.09) 0px 2px 1px, rgba(255, 255, 255, 0.09) 0px 4px 2px, rgba(255, 255, 255, 0.09) 0px 8px 4px, rgba(255, 255, 255, 0.09) 0px 8px 4px;
   --hover: rgb(250, 62, 62);
   --contactShadow: rgba(255, 255, 255, 0.4) 0px 2px 4px, rgba(255, 255, 255, 0.3) 0px 7px 13px -3px, rgba(255, 255, 255, 0.2) 0px -3px 0px inset;
 }

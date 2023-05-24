@@ -11,6 +11,7 @@ $titleFont: 'Josefin Sans', sans-serif;
 @import "partials/projects";
 @import "partials/skills";
 @import "partials/contact";
+@import "partials/experience";
 
 
 .darkMode {
@@ -28,7 +29,7 @@ $titleFont: 'Josefin Sans', sans-serif;
     --text:             #FFFFFF;
     --black :           #FFFFFF;
     --white :           #2b2b2b;
-    --navShadow: rgba(255, 255, 255, 0.09) 0px 2px 1px, rgba(255, 255, 255, 0.09) 0px 4px 2px, rgba(255, 255, 255, 0.09) 0px 8px 4px, rgba(255, 255, 255, 0.09) 0px 16px 8px, rgba(255, 255, 255, 0.09) 0px 32px 16px;
+    --navShadow: rgba(255, 255, 255, 0.09) 0px 1px .5px, rgba(255, 255, 255, 0.09) 0px 2px 1px, rgba(255, 255, 255, 0.09) 0px 4px 2px, rgba(255, 255, 255, 0.09) 0px 8px 4px, rgba(255, 255, 255, 0.09) 0px 8px 4px;
     --hover :    rgb(250, 62, 62);
     --contactShadow: rgba(255, 255, 255, 0.4) 0px 2px 4px, rgba(255, 255, 255, 0.3) 0px 7px 13px -3px, rgba(255, 255, 255, 0.2) 0px -3px 0px inset;
 
