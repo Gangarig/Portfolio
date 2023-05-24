@@ -4,6 +4,56 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content:center;
+    .svgPortrait {
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        object-fit: cover;
+        .svg {
+            height: 30vh;
+        }
+        .color {
+            fill: var(--text);
+        }
+    }
+    .headerText {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-evenly;
+        padding-bottom: 2rem;
+        gap: 1rem;
+        h1 {
+            font-size: 2rem;
+        }
+        p {
+            font-size: 1.3rem;
+        }
+        a {
+            width: 170px;
+            text-align: center;
+        }
+    }
+}
+ 
+
+@media (min-width:1024px) {
+    header {
+        max-width: 2000px;
+        .headerText {
+            h1 {
+                font-size: 2.5rem;
+            }
+            p {
+                font-size: 1.7rem;
+                max-width: 982px;
+            }
+        }
+    }
 }
 
 // button animation
