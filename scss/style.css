@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 2;
   box-shadow: var(--navShadow);
@@ -105,7 +105,7 @@
 }
 @media only screen and (max-width: 900px) {
   .nav {
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 2;
   }
@@ -306,6 +306,7 @@ header .headerText a {
     max-width: 2000px;
     height: 100vh;
     max-height: 1200px;
+    margin-top: 150px;
   }
   header .headerText h1 {
     font-size: 2.5rem;
