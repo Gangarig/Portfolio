@@ -776,6 +776,7 @@ footer .footerLinks h4 {
 
 html {
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 * {
