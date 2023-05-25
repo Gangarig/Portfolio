@@ -673,6 +673,7 @@ footer .footerLinks h4 {
 }
 #about {
   margin: 1rem;
+  padding-top: 8rem;
   min-height: 1000px;
 }
 #about h2 {
