@@ -44,6 +44,8 @@ header{
 @media (min-width:1024px) {
     header {
         max-width: 2000px;
+        height: 100vh;
+        max-height: 1200px;
         .headerText {
             h1 {
                 font-size: 2.5rem;

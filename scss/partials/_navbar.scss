@@ -17,8 +17,10 @@
 
 
 .logo {
+    display: grid;
+    place-items: center;
+    height: 100%;
     font-weight: bold;
-    
     z-index: 2;
     a{
         p{
@@ -169,8 +171,9 @@
         font-size: 25px;
     }
     .nav-bar.active{
-        height: 270px;
-        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        height: 320px;
+        border-radius: 10px;
+        box-shadow: var(--navShadow);
     }
     .nav-bar.active ul {
         opacity: 1;

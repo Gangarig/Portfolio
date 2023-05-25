@@ -1,5 +1,6 @@
 #about {
     margin: 1rem;
+    min-height: 1000px;
     h2 {
         padding-bottom: 2rem;
         text-align: center;
@@ -30,10 +31,54 @@
         font-size: 1.3rem;
     }
 }
-.webDev {
-    h2 {
-        text-align: left;
-    }
+.aboutText {
+    margin-top: 3rem;
+    text-align: center;
 }
+.vl {
+    border: 2px solid var(--text);
+    height: 2px;
+    width: 80vw;
 
+}
+@media (min-width:1112px){
+    #about {
+        width: 80vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        max-height: 1000px;
+        padding-top: 4rem;
+        max-width: 1500px;
+        .aboutContent {
+            flex-direction: row;
+            padding-top:0;
+            margin: 0;
+            padding: 2rem;
+            .box {
+                height: 450px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
 
+            }
+        }
+    }
+    .list2 {
+        height: 200px;
+    }
+    .vl {
+        border: 1px solid var(--text);
+        width: 1px;
+        height: 500px;
+    }
+    .aboutText {
+        padding-top: 4rem;
+        text-align: center;
+        max-width: 1000px;
+
+    }
+
+}

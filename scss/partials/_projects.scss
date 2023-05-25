@@ -26,12 +26,16 @@
     a {
         font-size: 1.3rem;
         text-align: center;
+        text-decoration: underline;
+    }   a:hover,a:focus {
+        color: var(--hover);
+        transition: 0.3s;
     }
 }
 
 .projectsGrid {
     max-width: 2000px;
-    margin: 0 auto;
+    margin: 2rem auto;
     display: grid;
     gap: 1rem;
     place-items: center;
@@ -41,7 +45,11 @@
     border-radius: 5px;
     width: 90vw;
     height: 50vw;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 img {
     object-fit: cover;
@@ -50,9 +58,100 @@ img {
     height: 50vw;
 
 }
-figcaption {
-
+.descBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+    height: 50%;
+    h2 {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        color: var(--white);
+        font-size: 3rem;
+    }
+    p {
+        text-align: center;
+        color: var(--white);
+        font-size: 1rem;
+    }
 }
+.card figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    opacity: 0;
+    background-color: var(--bgDark);
+    transition: opacity 0.3s ease;
+    border-radius: 5px;
+    padding: 1rem;
+    box-sizing: border-box;
+
+  }
+  
+  .card:hover figcaption {
+    opacity: 1;
+  }
+
+
+
+//Button animation
+  
+  button {
+    /* Variables */
+   --button_radius: 0.75em;
+   --button_color: var(--white);
+   --button_outline_color: var(--black);;
+   font-size: 17px;
+   font-weight: bold;
+   border: none;
+   border-radius: var(--button_radius);
+   background: var(--button_outline_color);
+  }
+  .visitBtn {
+   display: block;
+   -webkit-box-sizing: border-box;
+           box-sizing: border-box;
+   border: 2px solid var(--button_outline_color);
+   border-radius: var(--button_radius);
+   padding: 0.75em 1.5em;
+   background: var(--button_color);
+   color: var(--button_outline_color);
+   -webkit-transform: translateY(-0.2em);
+       -ms-transform: translateY(-0.2em);
+           transform: translateY(-0.2em);
+   -webkit-transition: -webkit-transform 0.1s ease;
+   transition: -webkit-transform 0.1s ease;
+   transition: transform 0.1s ease;
+   transition: transform 0.1s ease, -webkit-transform 0.1s ease;
+  }
+  
+  button:hover .visitBtn {
+    /* Pull the button upwards when hovered */
+   -webkit-transform: translateY(-0.33em);
+       -ms-transform: translateY(-0.33em);
+           transform: translateY(-0.33em);
+  }
+  
+  button:active .visitBtn {
+    /* Push the button downwards when pressed */
+   -webkit-transform: translateY(0);
+       -ms-transform: translateY(0);
+           transform: translateY(0);
+  }
+
+
+
+
 
   @media (min-width:768px) {
 
@@ -70,34 +169,27 @@ figcaption {
         }
   }
   @media (min-width:1024px) {
+    #projects {
+        margin: 0;
+        padding: 0;
+        max-width: 1500px;
+        width: 80vw;
+    }
         .projectsGrid {
             grid-template-columns: repeat(3, 1fr);
-            width: 95vw;
-            height: 60vh;
+            margin: 0;
+            padding: 2rem;
+            gap: 1rem;
+            
         }
-        .card {
-            width: 30vw;
-            height: 20vw;
+        .card , img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+
         }
-        img{
-            width: 30vw;
-            height: 20vw;
-        }
+
   }
-  @media (min-width:1500px) {
-    #projects {
-        max-width: 2000px;
-        height: 1000px;
-        .projectsGrid {
-            max-width: 1600px;
-            place-items: center;
-            .card {
-                width: 500px;
-                height: 300px;
-            }
-        }
-    }
-  }
-  
+
 
   

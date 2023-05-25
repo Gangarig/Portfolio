@@ -18,6 +18,9 @@
 }
 
 .logo {
+  display: grid;
+  place-items: center;
+  height: 100%;
   font-weight: bold;
   z-index: 2;
 }
@@ -157,8 +160,9 @@
     font-size: 25px;
   }
   .nav-bar.active {
-    height: 270px;
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    height: 320px;
+    border-radius: 10px;
+    box-shadow: var(--navShadow);
   }
   .nav-bar.active ul {
     opacity: 1;
@@ -300,6 +304,8 @@ header .headerText a {
 @media (min-width: 1024px) {
   header {
     max-width: 2000px;
+    height: 100vh;
+    max-height: 1200px;
   }
   header .headerText h1 {
     font-size: 2.5rem;
@@ -370,11 +376,16 @@ header .headerText a {
 #projects a {
   font-size: 1.3rem;
   text-align: center;
+  text-decoration: underline;
+}
+#projects a:hover, #projects a:focus {
+  color: var(--hover);
+  transition: 0.3s;
 }
 
 .projectsGrid {
   max-width: 2000px;
-  margin: 0 auto;
+  margin: 2rem auto;
   display: grid;
   gap: 1rem;
   place-items: center;
@@ -385,6 +396,11 @@ header .headerText a {
   border-radius: 5px;
   width: 90vw;
   height: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 img {
@@ -393,6 +409,84 @@ img {
   border-radius: 5px;
   width: 90vw;
   height: 50vw;
+}
+
+.descBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+  height: 50%;
+}
+.descBox h2 {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  color: var(--white);
+  font-size: 3rem;
+}
+.descBox p {
+  text-align: center;
+  color: var(--white);
+  font-size: 1rem;
+}
+
+.card figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  opacity: 0;
+  background-color: var(--bgDark);
+  transition: opacity 0.3s ease;
+  border-radius: 5px;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.card:hover figcaption {
+  opacity: 1;
+}
+
+button {
+  /* Variables */
+  --button_radius: 0.75em;
+  --button_color: var(--white);
+  --button_outline_color: var(--black);
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+}
+
+.visitBtn {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+button:hover .visitBtn {
+  /* Pull the button upwards when hovered */
+  transform: translateY(-0.33em);
+}
+
+button:active .visitBtn {
+  /* Push the button downwards when pressed */
+  transform: translateY(0);
 }
 
 @media (min-width: 768px) {
@@ -410,32 +504,22 @@ img {
   }
 }
 @media (min-width: 1024px) {
+  #projects {
+    margin: 0;
+    padding: 0;
+    max-width: 1500px;
+    width: 80vw;
+  }
   .projectsGrid {
     grid-template-columns: repeat(3, 1fr);
-    width: 95vw;
-    height: 60vh;
+    margin: 0;
+    padding: 2rem;
+    gap: 1rem;
   }
-  .card {
-    width: 30vw;
-    height: 20vw;
-  }
-  img {
-    width: 30vw;
-    height: 20vw;
-  }
-}
-@media (min-width: 1500px) {
-  #projects {
-    max-width: 2000px;
-    height: 1000px;
-  }
-  #projects .projectsGrid {
-    max-width: 1600px;
-    place-items: center;
-  }
-  #projects .projectsGrid .card {
-    width: 500px;
-    height: 300px;
+  .card, img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
   }
 }
 .submit {
@@ -558,54 +642,32 @@ footer .footerLinks {
 footer .footerLinks a {
   font-size: 2.5rem;
 }
+footer .footerLinks a:hover, footer .footerLinks a:focus {
+  scale: 1.1;
+  color: var(--hover);
+}
 footer .footerLinks h4 {
   margin-bottom: 1rem;
 }
 
 @media (min-width: 1024px) {
   #contact {
-    flex-direction: row;
-    justify-content: space-evenly;
     max-width: 1500px;
-    height: 100vh;
-  }
-  #info {
-    justify-content: space-between;
-    max-width: 500px;
-    height: 70%;
-  }
-  #info .subinfo {
-    margin-bottom: 5rem;
-  }
-  form {
-    max-width: 500px;
-    height: 70%;
-  }
-  footer h4 {
-    height: 2rem;
-    text-align: center;
-  }
-}
-@media (min-width: 1500px) {
-  #contact {
     flex-direction: row;
-    justify-content: space-evenly;
-    max-width: 2000px;
+    justify-content: space-around;
+    max-height: 800px;
   }
-  #info {
-    justify-content: space-between;
-    max-width: 750px;
+  #contact #info {
+    width: 30%;
+    max-height: 800px;
   }
-  form {
-    max-width: 750px;
-  }
-  footer h4 {
-    height: 2rem;
-    text-align: center;
+  #contact form {
+    width: 30%;
   }
 }
 #about {
   margin: 1rem;
+  min-height: 1000px;
 }
 #about h2 {
   padding-bottom: 2rem;
@@ -639,11 +701,56 @@ footer .footerLinks h4 {
   font-size: 1.3rem;
 }
 
-.webDev h2 {
-  text-align: left;
+.aboutText {
+  margin-top: 3rem;
+  text-align: center;
 }
 
-.darkMode {
+.vl {
+  border: 2px solid var(--text);
+  height: 2px;
+  width: 80vw;
+}
+
+@media (min-width: 1112px) {
+  #about {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    max-height: 1000px;
+    padding-top: 4rem;
+    max-width: 1500px;
+  }
+  #about .aboutContent {
+    flex-direction: row;
+    padding-top: 0;
+    margin: 0;
+    padding: 2rem;
+  }
+  #about .aboutContent .box {
+    height: 450px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .list2 {
+    height: 200px;
+  }
+  .vl {
+    border: 1px solid var(--text);
+    width: 1px;
+    height: 500px;
+  }
+  .aboutText {
+    padding-top: 4rem;
+    text-align: center;
+    max-width: 1000px;
+  }
+}
+:root {
   --bgDark: #2b2b2b;
   --bg: #dfe0e1;
   --black: black;
@@ -654,7 +761,7 @@ footer .footerLinks h4 {
   --hover: rgb(250, 62, 62);
 }
 
-:root {
+.darkmode {
   --bg: #2b2b2b;
   --text: #FFFFFF;
   --black: #FFFFFF;
