@@ -86,8 +86,7 @@
 
 
      <section id="about">
-        <h2  data-aos="fade-up"
-        data-aos-anchor-placement="center-bottom">Web Development</h2>
+        <h2  data-aos="fade-up">Web Development</h2>
         <div class="aboutContent">
             <div class="webDev box">
                 <h2 data-aos="fade-up"
@@ -294,17 +293,18 @@
                     <p>gangarign@gmail.com</p>
                 </div>
             </div>
-            <form action="post" data-aos="fade-up"
-            data-aos-anchor-placement="center-bottom">
-                    <h2>CONTACT ME</h2>
-                    <label for="name">Your Name</label>
-                    <input type="text" name="name" id="name" required>
-                    <label for="phone">E-Mail</label>
-                    <input type="text" name="email" id="email" required>
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message" cols="40" rows="3"></textarea>
-                    <button type="submit" class="submit"> SEND MESSAGE</button>
+            <form id="contactForm" action="contact.php" method="POST" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                <h2>CONTACT ME</h2>
+                <label for="name">Your Name</label>
+                <input type="text" name="name" id="name" required>
+                <label for="email">E-Mail</label>
+                <input type="email" name="email" id="email" required>
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="40" rows="3"></textarea>
+                <button type="submit" class="contactBtn">SEND MESSAGE</button>
+                <div id="successMessage"></div>
             </form>
+            
     </section>
     <!-- contact ends here -->
 
