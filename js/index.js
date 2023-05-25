@@ -21,3 +21,6 @@ document.querySelectorAll('#sun1','#sun2').forEach(function(element) {
 function darkMode(){
     document.body.classList.toggle('darkmode')
 }
+ 
+
+

@@ -23,6 +23,7 @@
   height: 100%;
   font-weight: bold;
   z-index: 2;
+  cursor: pointer;
 }
 .logo a p {
   font-size: 30px;
