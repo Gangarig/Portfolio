@@ -265,14 +265,16 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 600px;
 }
 header .svgPortrait {
-  height: 50vh;
+  height: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
   -o-object-fit: cover;
      object-fit: cover;
+  padding-bottom: 2rem;
 }
 header .svgPortrait .svg {
   height: 30vh;
