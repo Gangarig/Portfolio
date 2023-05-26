@@ -25,9 +25,10 @@ $titleFont: 'Josefin Sans', sans-serif;
 }
 .darkmode{
     --bg:               #2b2b2b;
+    --bgDark :          #dfe0e1;
     --text:             #FFFFFF;
     --black :           #FFFFFF;
-    --white :           #2b2b2b;
+    --white :           black;
     --navShadow: rgba(255, 255, 255, 0.09) 0px 1px .5px, rgba(255, 255, 255, 0.09) 0px 2px 1px, rgba(255, 255, 255, 0.09) 0px 4px 2px, rgba(255, 255, 255, 0.09) 0px 8px 4px, rgba(255, 255, 255, 0.09) 0px 8px 4px;
     --hover :    rgb(250, 62, 62);
     --contactShadow: rgba(255, 255, 255, 0.4) 0px 2px 4px, rgba(255, 255, 255, 0.3) 0px 7px 13px -3px, rgba(255, 255, 255, 0.2) 0px -3px 0px inset;
@@ -115,6 +116,9 @@ input , label ,textarea {
 #successMessage{
 
     p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 300px;
         background-color: var(--bgDark);
         padding: 1rem;
