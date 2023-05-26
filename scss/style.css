@@ -267,6 +267,7 @@ header {
   align-items: center;
   justify-content: center;
   min-height: 600px;
+  overflow-x: hidden;
 }
 header .svgPortrait {
   height: 30vh;
@@ -353,7 +354,6 @@ header .headerText a {
 
 #projects {
   width: 100vw;
-  margin: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -458,7 +458,15 @@ img {
   box-sizing: border-box;
 }
 
+.card:focus figcaption {
+  opacity: 1;
+}
+
 .card:hover figcaption {
+  opacity: 1;
+}
+
+.card.hover figcaption {
   opacity: 1;
 }
 
@@ -561,6 +569,7 @@ button:active .visitBtn {
 }
 
 #contact {
+  overflow-x: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -673,9 +682,10 @@ footer .footerLinks h4 {
   }
 }
 #about {
-  margin: 1rem;
+  padding: 1rem;
   padding-top: 8rem;
   min-height: 1000px;
+  overflow-x: hidden;
 }
 #about h2 {
   padding-bottom: 2rem;
@@ -779,13 +789,6 @@ footer .footerLinks h4 {
   --contactShadow: rgba(255, 255, 255, 0.4) 0px 2px 4px, rgba(255, 255, 255, 0.3) 0px 7px 13px -3px, rgba(255, 255, 255, 0.2) 0px -3px 0px inset;
 }
 
-html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-  height: -moz-max-content;
-  height: max-content;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -796,11 +799,12 @@ html {
 }
 
 body {
+  width: 100vw;
+  scroll-behavior: smooth;
   background-color: var(--bg);
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;

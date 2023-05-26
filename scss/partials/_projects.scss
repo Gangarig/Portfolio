@@ -1,10 +1,10 @@
 #projects {
     width: 100vw;
-    margin: 1rem ;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
     .titleProjects{
         margin-top: 7rem;
     }
@@ -99,12 +99,18 @@ img {
     padding: 1rem;
     box-sizing: border-box;
 
+  } 
+  .card:focus figcaption{
+    opacity: 1;
   }
-  
   .card:hover figcaption {
     opacity: 1;
   }
 
+  .card.hover figcaption {
+    opacity: 1;
+  }
+  
 
 
 //Button animation

@@ -44,3 +44,30 @@ document.getElementById("contactForm").addEventListener("submit", function(event
   };
   xhr.send(formData);
 });
+
+
+
+// for Touch screen Devices
+// Check if the device has touch support
+if ('ontouchstart' in window || navigator.maxTouchPoints) {
+  // Add a touch class to the body
+  document.body.classList.add('touch');
+
+  // Get all the cards
+  const cards = document.querySelectorAll('.card');
+
+  // Add touch event listeners to each card
+  cards.forEach((card) => {
+    card.addEventListener('touchstart', () => {
+      // Toggle the hover class on the current card
+      card.classList.toggle('hover');
+
+      // Remove the hover class from all other cards
+      cards.forEach((otherCard) => {
+        if (otherCard !== card) {
+          otherCard.classList.remove('hover');
+        }
+      });
+    });
+  });
+}

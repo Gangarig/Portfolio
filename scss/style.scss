@@ -33,11 +33,6 @@ $titleFont: 'Josefin Sans', sans-serif;
     --contactShadow: rgba(255, 255, 255, 0.4) 0px 2px 4px, rgba(255, 255, 255, 0.3) 0px 7px 13px -3px, rgba(255, 255, 255, 0.2) 0px -3px 0px inset;
 
 }
-html {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-    height: max-content;
-}
 *{
     margin: 0;
     padding: 0;
@@ -47,11 +42,12 @@ html {
     text-decoration: none;
 }
 body {
+    width: 100vw;
+    scroll-behavior: smooth;
     background-color: var(--bg);
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
