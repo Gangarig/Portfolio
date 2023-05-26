@@ -782,6 +782,8 @@ footer .footerLinks h4 {
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  height: -moz-max-content;
+  height: max-content;
 }
 
 * {
@@ -868,4 +870,13 @@ input, label, textarea {
   font-family: "Josefin Sans", sans-serif;
   color: var(--text);
   font-size: 1.3rem;
+}
+
+#successMessage p {
+  width: 300px;
+  background-color: var(--bgDark);
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px gray;
+  color: var(--white);
 }/*# sourceMappingURL=style.css.map */

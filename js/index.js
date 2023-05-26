@@ -27,7 +27,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
   xhr.onreadystatechange = function() {
     if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
       // Display success message
-      let successMessage = document.createElement("h2");
+      let successMessage = document.createElement("p");
       successMessage.className = "success-message";
       successMessage.textContent = "Message sent successfully. I will contact you soon. :D";
       document.getElementById("successMessage").innerHTML = "";

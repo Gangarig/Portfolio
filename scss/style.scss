@@ -36,6 +36,7 @@ $titleFont: 'Josefin Sans', sans-serif;
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    height: max-content;
 }
 *{
     margin: 0;
@@ -113,4 +114,16 @@ input , label ,textarea {
     font-family: $mainFont;
      color:var(--text);
     font-size: 1.3rem;
+}
+
+#successMessage{
+
+    p {
+        width: 300px;
+        background-color: var(--bgDark);
+        padding: 1rem;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px 2px gray;
+        color: var(--white);
+    }
 }
