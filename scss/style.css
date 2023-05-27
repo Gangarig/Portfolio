@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 2;
   box-shadow: var(--navShadow);
@@ -23,6 +23,7 @@
   height: 100%;
   font-weight: bold;
   z-index: 2;
+  cursor: pointer;
 }
 .logo a p {
   font-size: 30px;
@@ -105,7 +106,7 @@
 }
 @media only screen and (max-width: 900px) {
   .nav {
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 2;
   }
@@ -265,14 +266,17 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 600px;
+  overflow-x: hidden;
 }
 header .svgPortrait {
-  height: 50vh;
+  height: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
   -o-object-fit: cover;
      object-fit: cover;
+  padding-bottom: 2rem;
 }
 header .svgPortrait .svg {
   height: 30vh;
@@ -306,6 +310,7 @@ header .headerText a {
     max-width: 2000px;
     height: 100vh;
     max-height: 1200px;
+    margin-top: 150px;
   }
   header .headerText h1 {
     font-size: 2.5rem;
@@ -349,7 +354,6 @@ header .headerText a {
 
 #projects {
   width: 100vw;
-  margin: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -454,7 +458,15 @@ img {
   box-sizing: border-box;
 }
 
+.card:focus figcaption {
+  opacity: 1;
+}
+
 .card:hover figcaption {
+  opacity: 1;
+}
+
+.card.hover figcaption {
   opacity: 1;
 }
 
@@ -557,6 +569,7 @@ button:active .visitBtn {
 }
 
 #contact {
+  overflow-x: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -669,9 +682,14 @@ footer .footerLinks h4 {
   }
 }
 #about {
-  margin: 1rem;
+  padding: 1rem;
+  padding-top: 8rem;
   min-height: 1000px;
+<<<<<<< HEAD
   overflow-y: hidden;
+=======
+  overflow-x: hidden;
+>>>>>>> 48c7627baedd206dfbfcd6abbf5ec146ce58e37f
 }
 #about h2 {
   padding-bottom: 2rem;
@@ -767,16 +785,13 @@ footer .footerLinks h4 {
 
 .darkmode {
   --bg: #2b2b2b;
+  --bgDark: #dfe0e1;
   --text: #FFFFFF;
   --black: #FFFFFF;
-  --white: #2b2b2b;
+  --white: black;
   --navShadow: rgba(255, 255, 255, 0.09) 0px 1px .5px, rgba(255, 255, 255, 0.09) 0px 2px 1px, rgba(255, 255, 255, 0.09) 0px 4px 2px, rgba(255, 255, 255, 0.09) 0px 8px 4px, rgba(255, 255, 255, 0.09) 0px 8px 4px;
   --hover: rgb(250, 62, 62);
   --contactShadow: rgba(255, 255, 255, 0.4) 0px 2px 4px, rgba(255, 255, 255, 0.3) 0px 7px 13px -3px, rgba(255, 255, 255, 0.2) 0px -3px 0px inset;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 * {
@@ -789,11 +804,12 @@ html {
 }
 
 body {
+  width: 100vw;
+  scroll-behavior: smooth;
   background-color: var(--bg);
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -863,4 +879,16 @@ input, label, textarea {
   font-family: "Josefin Sans", sans-serif;
   color: var(--text);
   font-size: 1.3rem;
+}
+
+#successMessage p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  background-color: var(--bgDark);
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px gray;
+  color: var(--white);
 }/*# sourceMappingURL=style.css.map */

@@ -5,12 +5,15 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content:center;
+    min-height: 600px;
+    overflow-x: hidden;
     .svgPortrait {
-        height: 50vh;
+        height: 30vh;
         display: flex;
         justify-content: center;
         align-items: center;
         object-fit: cover;
+        padding-bottom: 2rem;
         .svg {
             height: 30vh;
         }
@@ -46,6 +49,7 @@ header{
         max-width: 2000px;
         height: 100vh;
         max-height: 1200px;
+        margin-top: 150px;
         .headerText {
             h1 {
                 font-size: 2.5rem;
