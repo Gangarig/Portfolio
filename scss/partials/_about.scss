@@ -1,6 +1,7 @@
 #about {
     margin: 1rem;
     min-height: 1000px;
+    overflow-y: hidden;
     h2 {
         padding-bottom: 2rem;
         text-align: center;
@@ -48,8 +49,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        height: 100vh;
-        max-height: 1000px;
+        height: max-content;
         padding-top: 4rem;
         max-width: 1500px;
         .aboutContent {
