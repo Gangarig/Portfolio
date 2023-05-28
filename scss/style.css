@@ -174,8 +174,8 @@
   /* Variables */
   --switch_width: 4em;
   --switch_height: 2em;
-  --thumb_color: var(--white);
-  --track_color: var(--white);
+  --thumb_color: var(--bg);
+  --track_color: var(--bg);
   --track_active_color: var(--bg);
   --outline_color: var(--text);
   font-size: 20px;
@@ -311,6 +311,7 @@ header .headerText a {
     height: 100vh;
     max-height: 1200px;
     margin-top: 150px;
+    overflow-y: hidden;
   }
   header .headerText h1 {
     font-size: 2.5rem;
@@ -323,7 +324,7 @@ header .headerText a {
 .contactBtn {
   --b: 3px; /* border thickness */
   --s: .45em; /* size of the corner */
-  --color: var(--black);
+  --color: var(--text);
   font-family: "Josefin Sans", sans-serif;
   padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
   color: var(--color);
@@ -372,7 +373,7 @@ header .headerText a {
 }
 #projects h2 {
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   width: 80%;
   height: 100px;
   display: flex;
@@ -396,7 +397,7 @@ header .headerText a {
   display: grid;
   gap: 1rem;
   place-items: center;
-  width: 100vw;
+  width: 95vw;
 }
 
 .card {
@@ -408,14 +409,21 @@ header .headerText a {
   align-items: center;
   position: relative;
   overflow: hidden;
+  box-shadow: var(--boxShadow);
+  border: 1px solid var(--text);
 }
 
-img {
+figure {
+  width: 100%;
+  height: 100%;
+}
+
+.card, img {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
-  width: 90vw;
-  height: 50vw;
+  width: 100%;
+  height: 100%;
 }
 
 .descBox {
@@ -423,19 +431,19 @@ img {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 70%;
+  width: 90%;
   height: 50%;
 }
-.descBox h2 {
-  text-align: center;
+.descBox #cardTitle {
+  text-align: left;
   padding: 0;
   margin: 0;
-  color: var(--white);
-  font-size: 3rem;
+  color: var(--text);
+  font-size: 1.5rem;
 }
-.descBox p {
+.descBox #cardText {
   text-align: center;
-  color: var(--white);
+  color: var(--text);
   font-size: 1rem;
 }
 
@@ -454,7 +462,6 @@ img {
   background-color: var(--bgDark);
   transition: opacity 0.3s ease;
   border-radius: 5px;
-  padding: 1rem;
   box-sizing: border-box;
 }
 
@@ -464,6 +471,7 @@ img {
 
 .card:hover figcaption {
   opacity: 1;
+  background-color: var(--bg2);
 }
 
 .card.hover figcaption {
@@ -473,13 +481,14 @@ img {
 button {
   /* Variables */
   --button_radius: 0.75em;
-  --button_color: var(--white);
-  --button_outline_color: var(--black);
+  --button_color: var(--bg);
+  --button_outline_color: var(--text);
   font-size: 17px;
   font-weight: bold;
   border: none;
   border-radius: var(--button_radius);
   background: var(--button_outline_color);
+  margin-top: 1.5rem;
 }
 
 .visitBtn {
@@ -513,28 +522,75 @@ button:active .visitBtn {
     width: 46vw;
     height: 30vw;
   }
-  img {
-    width: 46vw;
-    height: 30vw;
+  .descBox #cardTitle {
+    font-size: 2rem;
+  }
+  .descBox #cardText {
+    font-size: 1.3rem;
+    width: 40vw;
   }
 }
 @media (min-width: 1024px) {
-  #projects {
-    margin: 0;
-    padding: 0;
-    max-width: 1500px;
-    width: 80vw;
-  }
   .projectsGrid {
     grid-template-columns: repeat(3, 1fr);
     margin: 0;
     padding: 2rem;
     gap: 1rem;
+    align-items: stretch;
   }
-  .card, img {
+  .card,
+  img {
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 5px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .descBox {
+    width: 90%;
+  }
+  .descBox #cardTitle {
+    font-size: 1.3rem;
+  }
+  .descBox #cardText {
+    font-size: 1rem;
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .descBox {
+    width: 95%;
+  }
+  .descBox #cardTitle {
+    font-size: 1.5rem;
+  }
+  .descBox #cardText {
+    font-size: 1.3rem;
+    width: 100%;
+  }
+}
+@media (min-width: 1500px) {
+  .descBox {
+    width: 95%;
+  }
+  .descBox #cardTitle {
+    font-size: 2.3rem;
+  }
+  .descBox #cardText {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+}
+@media (min-width: 1800px) {
+  .descBox {
+    width: 95%;
+  }
+  .descBox #cardTitle {
+    font-size: 2.3rem;
+  }
+  .descBox #cardText {
+    font-size: 2rem;
+    width: 100%;
   }
 }
 .submit {
@@ -575,7 +631,14 @@ button:active .visitBtn {
   align-items: center;
   flex-direction: column;
   gap: 1rem;
-  width: 100vw;
+  width: 95vw;
+  overflow-y: hidden;
+  background-color: var(--bg2);
+  margin-top: 5rem;
+  border-radius: 30px;
+  border: solid 2px var(--text);
+  box-shadow: var(--boxShadow);
+  padding-bottom: 2rem;
 }
 
 #info {
@@ -615,6 +678,7 @@ form {
   justify-content: space-evenly;
   box-shadow: var(--contactShadow);
   border-radius: 3%;
+  border: 2px solid var(--text);
 }
 form label {
   width: 80%;
@@ -628,16 +692,16 @@ form input {
   border: none;
   outline: none;
   background-color: transparent;
-  border-bottom: 1px solid var(--black);
+  border-bottom: 1px solid var(--text);
 }
 form textarea {
   width: 80%;
   border: none;
   outline: none;
   background-color: transparent;
-  border-bottom: 1px solid var(--black);
+  border-bottom: 1px solid var(--text);
   font-size: 1.3rem;
-  box-shadow: 1px 1px 1px 1px var(--black);
+  box-shadow: 1px 1px 1px 1px var(--text);
   border-radius: 2px;
 }
 
@@ -675,21 +739,17 @@ footer .footerLinks h4 {
   }
   #contact #info {
     width: 30%;
-    max-height: 800px;
+    max-height: 700px;
   }
   #contact form {
-    width: 30%;
+    width: 35%;
   }
 }
 #about {
   padding: 1rem;
   padding-top: 8rem;
   min-height: 1000px;
-<<<<<<< HEAD
   overflow-y: hidden;
-=======
-  overflow-x: hidden;
->>>>>>> 48c7627baedd206dfbfcd6abbf5ec146ce58e37f
 }
 #about h2 {
   padding-bottom: 2rem;
@@ -706,6 +766,11 @@ footer .footerLinks h4 {
   border: 1px solid var(--text);
   border-radius: 10px;
   padding: 1rem;
+  background-color: var(--bg2);
+  box-shadow: var(--boxShadow);
+}
+.aboutContent hr {
+  color: var(--text);
 }
 
 .list2 {
@@ -773,25 +838,29 @@ footer .footerLinks h4 {
   }
 }
 :root {
-  --bgDark: #2b2b2b;
-  --bg: #dfe0e1;
-  --black: black;
-  --white: #FFFFFF;
-  --text: black;
-  --navShadow:rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-  --contactShadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-  --hover: rgb(250, 62, 62);
+  --bgDark: #0e100a;
+  --bg: #f7f8f1;
+  --bg2: #b7b2ad;
+  --black: #FFFFFF;
+  --white: black;
+  --text: #1b1d1d;
+  --hover: #eebc69;
+  --navShadow: rgba(27, 29, 29, 0.4) 0px 2px 4px, rgba(27, 29, 29, 0.3) 0px 7px 13px -3px, rgba(27, 29, 29, 0.2) 0px -3px 0px inset;
+  --boxShadow: rgba(27, 29, 29, 0.4) 0px 2px 4px, rgba(27, 29, 29, 0.3) 0px 7px 13px -3px, rgba(27, 29, 29, 0.2) 0px -3px 0px inset;
+  --contactShadow: rgba(27, 29, 29, 0.4) 0px 2px 4px, rgba(27, 29, 29, 0.3) 0px 7px 13px -3px, rgba(27, 29, 29, 0.2) 0px -3px 0px inset;
 }
 
 .darkmode {
-  --bg: #2b2b2b;
-  --bgDark: #dfe0e1;
-  --text: #FFFFFF;
+  --bgDark: #0e100a;
+  --bg: #0e100a;
+  --bg2: #2c2c2e;
   --black: #FFFFFF;
   --white: black;
-  --navShadow: rgba(255, 255, 255, 0.09) 0px 1px .5px, rgba(255, 255, 255, 0.09) 0px 2px 1px, rgba(255, 255, 255, 0.09) 0px 4px 2px, rgba(255, 255, 255, 0.09) 0px 8px 4px, rgba(255, 255, 255, 0.09) 0px 8px 4px;
+  --text: #0edfbd;
+  --navShadow: rgba(14, 223, 189, 0.4) 0px 2px 4px, rgba(14, 223, 189, 0.3) 0px 7px 13px -3px, rgba(14, 223, 189, 0.2) 0px -3px 0px inset;
   --hover: rgb(250, 62, 62);
-  --contactShadow: rgba(255, 255, 255, 0.4) 0px 2px 4px, rgba(255, 255, 255, 0.3) 0px 7px 13px -3px, rgba(255, 255, 255, 0.2) 0px -3px 0px inset;
+  --boxShadow: rgba(14, 223, 189, 0.4) 0px 2px 4px, rgba(14, 223, 189, 0.3) 0px 7px 13px -3px, rgba(14, 223, 189, 0.2) 0px -3px 0px inset;
+  --contactShadow:rgba(14, 223, 189, 0.4) 0px 2px 4px, rgba(14, 223, 189, 0.3) 0px 7px 13px -3px, rgba(14, 223, 189, 0.2) 0px -3px 0px inset;
 }
 
 * {
@@ -881,14 +950,18 @@ input, label, textarea {
   font-size: 1.3rem;
 }
 
+hr {
+  color: var(--text);
+}
+
 #successMessage p {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 300px;
-  background-color: var(--bgDark);
+  background-color: var(--bg);
   padding: 1rem;
   border-radius: 5px;
   box-shadow: 2px 2px 2px 2px gray;
-  color: var(--white);
+  color: var(--text);
 }/*# sourceMappingURL=style.css.map */

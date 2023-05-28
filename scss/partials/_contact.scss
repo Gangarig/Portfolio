@@ -32,8 +32,14 @@
     align-items: center;
     flex-direction: column;
     gap: 1rem; 
-    width: 100vw;
-    
+    width: 95vw;
+    overflow-y: hidden;
+    background-color: var(--bg2);
+    margin-top: 5rem;
+    border-radius: 30px;
+    border: solid 2px var(--text);
+    box-shadow: var(--boxShadow);
+    padding-bottom: 2rem;
 }
 #info {
     max-width: 90%;
@@ -71,6 +77,7 @@ form {
     justify-content: space-evenly;
     box-shadow: var(--contactShadow);
     border-radius: 3%;
+    border: 2px solid var(--text);
     label {
         width: 80%;
         border: none;
@@ -84,16 +91,16 @@ form {
         border: none;
         outline: none;
         background-color: transparent;
-        border-bottom: 1px solid var(--black);
+        border-bottom: 1px solid var(--text);
     }
     textarea{
         width: 80%;
         border: none;
         outline: none;
         background-color: transparent;
-        border-bottom: 1px solid var(--black);
+        border-bottom: 1px solid var(--text);
         font-size: 1.3rem;
-        box-shadow: 1px 1px 1px 1px var(--black);
+        box-shadow: 1px 1px 1px 1px var(--text);
         border-radius: 2px;
     }
 }
@@ -129,11 +136,12 @@ footer {
     max-height: 800px;
     #info {
     width: 30%;
-    max-height: 800px;
+    max-height: 700px;
 
     }
     form {
-        width: 30%;
+        width: 35%;
+        
     }
 
  }

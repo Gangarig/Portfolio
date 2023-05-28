@@ -4,7 +4,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
     .titleProjects{
         margin-top: 7rem;
     }
@@ -18,7 +17,7 @@
     }
     h2{
         text-align: center;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         width: 80%;
         height: 100px;
         display: flex;
@@ -42,7 +41,7 @@
     display: grid;
     gap: 1rem;
     place-items: center;
-    width: 100vw;
+    width: 95vw;
   }
 .card {
     border-radius: 5px;
@@ -53,12 +52,18 @@
     align-items: center;
     position: relative;
     overflow: hidden;
+    box-shadow:var(--boxShadow);
+    border: 1px solid var(--text);
 }
-img {
+figure {
+    width: 100%;
+    height: 100%;
+}
+.card ,img {
     object-fit: cover;
     border-radius: 5px;
-    width: 90vw;
-    height: 50vw;
+    width: 100%;
+    height: 100%;
 
 }
 .descBox {
@@ -66,21 +71,23 @@ img {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 70%;
+    width: 90%;
     height: 50%;
-    h2 {
-        text-align: center;
+    #cardTitle {
+        text-align: left;
         padding: 0;
         margin: 0;
-        color: var(--white);
-        font-size: 3rem;
+        color: var(--text);
+        font-size: 1.5rem;
     }
-    p {
+    #cardText {
         text-align: center;
-        color: var(--white);
+        color: var(--text);
         font-size: 1rem;
     }
+    
 }
+
 .card figcaption {
     position: absolute;
     top: 0;
@@ -96,36 +103,39 @@ img {
     background-color: var(--bgDark);
     transition: opacity 0.3s ease;
     border-radius: 5px;
-    padding: 1rem;
     box-sizing: border-box;
 
   } 
   .card:focus figcaption{
+
     opacity: 1;
   }
   .card:hover figcaption {
     opacity: 1;
+    background-color: var(--bg2);
   }
 
   .card.hover figcaption {
     opacity: 1;
   }
-  
+
 
 
 //Button animation
   
-  button {
+button {
     /* Variables */
    --button_radius: 0.75em;
-   --button_color: var(--white);
-   --button_outline_color: var(--black);;
+   --button_color: var(--bg);
+   --button_outline_color: var(--text);
    font-size: 17px;
    font-weight: bold;
    border: none;
    border-radius: var(--button_radius);
    background: var(--button_outline_color);
+   margin-top: 1.5rem;
   }
+  
   .visitBtn {
    display: block;
    -webkit-box-sizing: border-box;
@@ -172,33 +182,81 @@ img {
             width: 46vw;
             height: 30vw;
         }
-        img{
-            width: 46vw;
-            height: 30vw;
+        .descBox{
+        #cardTitle {
+            font-size: 2rem;
+        }
+        #cardText {
+            font-size: 1.3rem;
+            width: 40vw;
+        }
         }
   }
-  @media (min-width:1024px) {
-    #projects {
-        margin: 0;
-        padding: 0;
-        max-width: 1500px;
-        width: 80vw;
+  @media (min-width: 1024px) {
+    .projectsGrid {
+      grid-template-columns: repeat(3, 1fr);
+      margin: 0;
+      padding: 2rem;
+      gap: 1rem;
+      align-items: stretch; 
     }
-        .projectsGrid {
-            grid-template-columns: repeat(3, 1fr);
-            margin: 0;
-            padding: 2rem;
-            gap: 1rem;
-            
-        }
-        .card , img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
 
-        }
-
+    .card,
+    img {
+      width: 100%;
+      height: 100%; 
+      border-radius: 5px;
+      object-fit: cover; 
+    }    
+    .descBox{
+        width: 90%;
+    #cardTitle {
+        font-size: 1.3rem;
+    }
+    #cardText {
+        font-size: 1rem;
+        width: 100%;
+    }
+    }
   }
+  @media (min-width: 1200px) { 
+    .descBox{
+        width: 95%;
+    #cardTitle {
+        font-size: 1.5rem;
+    }
+    #cardText {
+        font-size: 1.3rem;
+        width: 100%;
+    }
+    }
+  }
+  @media (min-width: 1500px) { 
+    .descBox{
+        width: 95%;
+    #cardTitle {
+        font-size: 2.3rem;
+    }
+    #cardText {
+        font-size: 1.5rem;
+        width: 100%;
+    }
+    }
+  }
+  @media (min-width: 1800px) { 
+    .descBox{
+        width: 95%;
+    #cardTitle {
+        font-size: 2.3rem;
+    }
+    #cardText {
+        font-size: 2rem;
+        width: 100%;
+    }
+    }
+  }
+
+
 
 
   

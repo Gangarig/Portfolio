@@ -50,6 +50,7 @@ header{
         height: 100vh;
         max-height: 1200px;
         margin-top: 150px;
+        overflow-y: hidden;
         .headerText {
             h1 {
                 font-size: 2.5rem;
@@ -66,7 +67,7 @@ header{
 .contactBtn {
     --b: 3px;   /* border thickness */
     --s: .45em; /* size of the corner */
-    --color: var(--black);
+    --color: var(--text);
     font-family: $mainFont;
     padding: calc(.5em + var(--s)) calc(.9em + var(--s));
     color: var(--color);
