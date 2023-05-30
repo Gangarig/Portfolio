@@ -9,7 +9,7 @@
     position: fixed;
     top: 0;
     z-index: 2;
-    box-shadow: var(--navShadow);
+    box-shadow: var(--navActive);
 }
 .icons{
     display: none;
@@ -174,7 +174,8 @@
     .nav-bar.active{
         height: 320px;
         border-radius: 10px;
-        box-shadow: var(--navShadow);
+        box-shadow: var(--navActive);
+
     }
     .nav-bar.active ul {
         opacity: 1;

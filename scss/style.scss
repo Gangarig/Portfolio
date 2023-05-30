@@ -22,7 +22,9 @@ $titleFont: 'Josefin Sans', sans-serif;
     --white :           black;
     --text:             #1b1d1d;
     --hover :    #eebc69;
-    --navShadow: rgba(27, 29, 29, 0.4) 0px 2px 4px, rgba(27, 29, 29, 0.3) 0px 7px 13px -3px, rgba(27, 29, 29, 0.2) 0px -3px 0px inset;
+    --navShadow: rgba(27, 29, 29, 0.4) 0px 0px 4px, rgba(27, 29, 29, 0.3) 0px 7px 13px -3px, rgba(27, 29, 29, 0.2) 0px -3px 0px inset;
+    --navActive: rgba(27, 29, 29, 0.4) 0px 4px 4px 0px;
+
     --boxShadow: rgba(27, 29, 29, 0.4) 0px 2px 4px, rgba(27, 29, 29, 0.3) 0px 7px 13px -3px, rgba(27, 29, 29, 0.2) 0px -3px 0px inset;
     --contactShadow: rgba(27, 29, 29, 0.4) 0px 2px 4px, rgba(27, 29, 29, 0.3) 0px 7px 13px -3px, rgba(27, 29, 29, 0.2) 0px -3px 0px inset;
 
@@ -36,6 +38,9 @@ $titleFont: 'Josefin Sans', sans-serif;
     --white :           black;
     --text:             #0edfbd;
     --navShadow: rgba(14, 223, 189, 0.4) 0px 2px 4px, rgba(14, 223, 189, 0.3) 0px 7px 13px -3px, rgba(14, 223, 189, 0.2) 0px -3px 0px inset;
+    --navActive: rgba(14, 223, 189, 0.4) 0px 4px 4px 0px;
+
+
     --hover :    rgb(250, 62, 62);
     --boxShadow: rgba(14, 223, 189, 0.4) 0px 2px 4px, rgba(14, 223, 189, 0.3) 0px 7px 13px -3px, rgba(14, 223, 189, 0.2) 0px -3px 0px inset;
     --contactShadow:rgba(14, 223, 189, 0.4) 0px 2px 4px, rgba(14, 223, 189, 0.3) 0px 7px 13px -3px, rgba(14, 223, 189, 0.2) 0px -3px 0px inset;
