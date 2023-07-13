@@ -25,26 +25,27 @@ document.getElementById("contactForm").addEventListener("submit", function(event
   let xhr = new XMLHttpRequest();
   xhr.open("POST", this.action, true);
   xhr.onreadystatechange = function() {
-    if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-      // Display success message
-      let successMessage = document.createElement("p");
-      successMessage.className = "success-message";
-      successMessage.textContent = "Message sent successfully. I will contact you soon. :D";
-      document.getElementById("successMessage").innerHTML = "";
-      document.getElementById("successMessage").appendChild(successMessage);
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        // Show success toast
+        Toastify({
+          text: "Message sent successfully. I will contact you soon. :D",
+          className: "success",
+        }).showToast();
+      } else {
+        // Show danger toast for error message
+        Toastify({
+          text: "Something went wrong. Please try again later.",
+          className: "danger",
+        }).showToast();
+      }
 
       // Clear form inputs
       document.getElementById("contactForm").reset();
-
-      // Hide success message after 5 seconds
-      setTimeout(function() {
-        document.getElementById("successMessage").innerHTML = "";
-      }, 5000);
     }
   };
   xhr.send(formData);
 });
-
 
 
 // for Touch screen Devices
@@ -71,3 +72,22 @@ if ('ontouchstart' in window || navigator.maxTouchPoints) {
     });
   });
 }
+
+// Toastify
+$(document).ready(function() {
+  $("#sendMessageBtn").click(function() {
+    Toastify({
+      text: "Message Sent Successfully. I will be in touch.",
+      className: "success",
+    }).showToast();
+  });
+});
+$(document).ready(function() {
+  $("#error").click(function() {
+    Toastify({
+      text: "Something went wrong",
+      className: "danger",
+    }).showToast();
+  });
+});
+

@@ -5,12 +5,18 @@
 $mainFont :'Josefin Sans', sans-serif;
 $titleFont: 'Josefin Sans', sans-serif;
 
+
+
 // partials are imported here
 @import "partials/navbar";
 @import "partials/header";
 @import "partials/projects";
 @import "partials/contact";
 @import "partials/about";
+@import "partials/toastify";
+@import '/node_modules/toastify-js/src/toastify.css';
+
+
 
 
 :root {
@@ -38,8 +44,6 @@ $titleFont: 'Josefin Sans', sans-serif;
     --text:             #0edfbd;
     --navShadow: rgba(14, 223, 189, 0.4) 0px 2px 4px, rgba(14, 223, 189, 0.3) 0px 7px 13px -3px, rgba(14, 223, 189, 0.2) 0px -3px 0px inset;
     --navActive: rgba(14, 223, 189, 0.4) 0px 4px 4px 0px;
-
-
     --hover :    rgb(250, 62, 62);
     --boxShadow: rgba(14, 223, 189, 0.4) 0px 2px 4px, rgba(14, 223, 189, 0.3) 0px 7px 13px -3px, rgba(14, 223, 189, 0.2) 0px -3px 0px inset;
     --contactShadow:rgba(14, 223, 189, 0.4) 0px 2px 4px, rgba(14, 223, 189, 0.3) 0px 7px 13px -3px, rgba(14, 223, 189, 0.2) 0px -3px 0px inset;
@@ -125,8 +129,17 @@ input , label ,textarea {
 }
 hr {
     color: var(--text);
-}
-
+    background-color: var(--text);
+    border: none;
+    height: 1px;
+    margin: 5px 0;
+  
+    // For Internet Explorer 10+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      border: 1px solid var(--text);
+    }
+  }
+  
 #successMessage{
 
     p {

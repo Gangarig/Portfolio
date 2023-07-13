@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap");
+@import '/node_modules/toastify-js/src/toastify.css';
 .nav {
   width: 100vw;
   height: 80px;
@@ -839,6 +840,18 @@ footer .footerLinks h4 {
     max-width: 1000px;
   }
 }
+.toastify.success {
+  background-color: var(--bg);
+  font-family: "Josefin Sans", sans-serif;
+  color: var(--text);
+}
+
+.toastify.danger {
+  background-color: var(--bg);
+  font-family: "Josefin Sans", sans-serif;
+  color: var(--text);
+}
+
 :root {
   --bgDark: #0e100a;
   --bg: #f7f8f1;
@@ -956,6 +969,15 @@ input, label, textarea {
 
 hr {
   color: var(--text);
+  background-color: var(--text);
+  border: none;
+  height: 1px;
+  margin: 5px 0;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  hr {
+    border: 1px solid var(--text);
+  }
 }
 
 #successMessage p {
