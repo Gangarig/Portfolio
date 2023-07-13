@@ -144,6 +144,7 @@
     background-color: var(--bg);
     transition: 0.5s;
     overflow: hidden;
+    border: none;
   }
   .nav-bar ul {
     display: block;
@@ -696,10 +697,8 @@ form input {
 }
 form textarea {
   width: 80%;
-  border: none;
-  outline: none;
   background-color: transparent;
-  border-bottom: 1px solid var(--text);
+  border: 1px solid var(--text);
   font-size: 1.3rem;
   box-shadow: 1px 1px 1px 1px var(--text);
   border-radius: 2px;
@@ -786,6 +785,9 @@ footer .footerLinks h4 {
   text-align: center;
   color: var(--text);
   font-size: 1.3rem;
+}
+.list2 hr {
+  color: var(--text);
 }
 
 .aboutText {
@@ -965,5 +967,9 @@ hr {
   padding: 1rem;
   border-radius: 5px;
   box-shadow: 2px 2px 2px 2px gray;
+  color: var(--text);
+}
+
+.hrLine {
   color: var(--text);
 }/*# sourceMappingURL=style.css.map */

@@ -95,10 +95,8 @@ form {
     }
     textarea{
         width: 80%;
-        border: none;
-        outline: none;
         background-color: transparent;
-        border-bottom: 1px solid var(--text);
+        border: 1px solid var(--text);
         font-size: 1.3rem;
         box-shadow: 1px 1px 1px 1px var(--text);
         border-radius: 2px;
