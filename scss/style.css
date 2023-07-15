@@ -1,3 +1,4 @@
+@import url(node_modules/bootstrap-icons/font/bootstrap-icons.scss);
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap");
 @import '/node_modules/toastify-js/src/toastify.css';
 .nav {
@@ -362,9 +363,11 @@ header .headerText a {
   align-items: center;
   flex-direction: column;
 }
+
 #projects .titleProjects {
   margin-top: 7rem;
 }
+
 #projects h1 {
   text-align: center;
   font-size: 1.3rem;
@@ -373,6 +376,7 @@ header .headerText a {
   justify-content: center;
   align-items: center;
 }
+
 #projects h2 {
   text-align: center;
   font-size: 1.5rem;
@@ -383,12 +387,15 @@ header .headerText a {
   align-items: center;
   flex-direction: column;
 }
+
 #projects a {
   font-size: 1.3rem;
   text-align: center;
   text-decoration: underline;
 }
-#projects a:hover, #projects a:focus {
+
+#projects a:hover,
+#projects a:focus {
   color: var(--hover);
   transition: 0.3s;
 }
@@ -406,6 +413,8 @@ header .headerText a {
   border-radius: 5px;
   width: 90vw;
   height: 50vw;
+  min-height: 200px;
+  min-width: 337.5px; /* Adjust this value as needed */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -420,7 +429,7 @@ figure {
   height: 100%;
 }
 
-.card, img {
+.card img {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
@@ -436,6 +445,7 @@ figure {
   width: 90%;
   height: 50%;
 }
+
 .descBox #cardTitle {
   text-align: left;
   padding: 0;
@@ -443,6 +453,7 @@ figure {
   color: var(--text);
   font-size: 1.5rem;
 }
+
 .descBox #cardText {
   text-align: center;
   color: var(--text);
@@ -467,17 +478,14 @@ figure {
   box-sizing: border-box;
 }
 
-.card:focus figcaption {
+.card:focus figcaption,
+.card:hover figcaption,
+.card.hover figcaption {
   opacity: 1;
 }
 
 .card:hover figcaption {
-  opacity: 1;
   background-color: var(--bg2);
-}
-
-.card.hover figcaption {
-  opacity: 1;
 }
 
 button {
@@ -506,12 +514,10 @@ button {
 }
 
 button:hover .visitBtn {
-  /* Pull the button upwards when hovered */
   transform: translateY(-0.33em);
 }
 
 button:active .visitBtn {
-  /* Push the button downwards when pressed */
   transform: translateY(0);
 }
 
@@ -852,12 +858,29 @@ footer .footerLinks h4 {
   color: var(--text);
 }
 
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: var(--bg2);
+  color: var(--text);
+  border: 1px solid var(--black);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#scrollToTopBtn.show {
+  display: block;
+}
+
 :root {
   --bgDark: #0e100a;
   --bg: #f7f8f1;
   --bg2: #b7b2ad;
-  --black: #FFFFFF;
-  --white: black;
+  --black: black;
+  --white: #FFFFFF;
   --text: #1b1d1d;
   --hover: #eebc69;
   --navShadow: rgba(27, 29, 29, 0.4) 0px 0px 4px, rgba(27, 29, 29, 0.3) 0px 7px 13px -3px, rgba(27, 29, 29, 0.2) 0px -3px 0px inset;

@@ -4,38 +4,45 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    .titleProjects{
-        margin-top: 7rem;
-    }
-    h1 {
-        text-align: center;
-        font-size: 1.3rem;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    h2{
-        text-align: center;
-        font-size: 1.5rem;
-        width: 80%;
-        height: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    a {
-        font-size: 1.3rem;
-        text-align: center;
-        text-decoration: underline;
-    }   a:hover,a:focus {
-        color: var(--hover);
-        transition: 0.3s;
-    }
-}
-
-.projectsGrid {
+  }
+  
+  #projects .titleProjects {
+    margin-top: 7rem;
+  }
+  
+  #projects h1 {
+    text-align: center;
+    font-size: 1.3rem;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #projects h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    width: 80%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  #projects a {
+    font-size: 1.3rem;
+    text-align: center;
+    text-decoration: underline;
+  }
+  
+  #projects a:hover,
+  #projects a:focus {
+    color: var(--hover);
+    transition: 0.3s;
+  }
+  
+  .projectsGrid {
     max-width: 2000px;
     margin: 2rem auto;
     display: grid;
@@ -43,52 +50,59 @@
     place-items: center;
     width: 95vw;
   }
-.card {
+  
+  .card {
     border-radius: 5px;
     width: 90vw;
     height: 50vw;
+    min-height: 200px;
+    min-width: 337.5px; /* Adjust this value as needed */
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     overflow: hidden;
-    box-shadow:var(--boxShadow);
+    box-shadow: var(--boxShadow);
     border: 1px solid var(--text);
-}
-figure {
+  }
+  
+  
+  figure {
     width: 100%;
     height: 100%;
-}
-.card ,img {
+  }
+  
+  .card img {
     object-fit: cover;
     border-radius: 5px;
     width: 100%;
     height: 100%;
-
-}
-.descBox {
+  }
+  
+  .descBox {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 90%;
     height: 50%;
-    #cardTitle {
-        text-align: left;
-        padding: 0;
-        margin: 0;
-        color: var(--text);
-        font-size: 1.5rem;
-    }
-    #cardText {
-        text-align: center;
-        color: var(--text);
-        font-size: 1rem;
-    }
-    
-}
-
-.card figcaption {
+  }
+  
+  .descBox #cardTitle {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    color: var(--text);
+    font-size: 1.5rem;
+  }
+  
+  .descBox #cardText {
+    text-align: center;
+    color: var(--text);
+    font-size: 1rem;
+  }
+  
+  .card figcaption {
     position: absolute;
     top: 0;
     left: 0;
@@ -104,159 +118,145 @@ figure {
     transition: opacity 0.3s ease;
     border-radius: 5px;
     box-sizing: border-box;
-
-  } 
-  .card:focus figcaption{
-
-    opacity: 1;
   }
-  .card:hover figcaption {
-    opacity: 1;
-    background-color: var(--bg2);
-  }
-
+  
+  .card:focus figcaption,
+  .card:hover figcaption,
   .card.hover figcaption {
     opacity: 1;
   }
-
-
-
-//Button animation
   
-button {
+  .card:hover figcaption {
+    background-color: var(--bg2);
+  }
+  
+  button {
     /* Variables */
-   --button_radius: 0.75em;
-   --button_color: var(--bg);
-   --button_outline_color: var(--text);
-   font-size: 17px;
-   font-weight: bold;
-   border: none;
-   border-radius: var(--button_radius);
-   background: var(--button_outline_color);
-   margin-top: 1.5rem;
+    --button_radius: 0.75em;
+    --button_color: var(--bg);
+    --button_outline_color: var(--text);
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+    margin-top: 1.5rem;
   }
   
   .visitBtn {
-   display: block;
-   -webkit-box-sizing: border-box;
-           box-sizing: border-box;
-   border: 2px solid var(--button_outline_color);
-   border-radius: var(--button_radius);
-   padding: 0.75em 1.5em;
-   background: var(--button_color);
-   color: var(--button_outline_color);
-   -webkit-transform: translateY(-0.2em);
-       -ms-transform: translateY(-0.2em);
-           transform: translateY(-0.2em);
-   -webkit-transition: -webkit-transform 0.1s ease;
-   transition: -webkit-transform 0.1s ease;
-   transition: transform 0.1s ease;
-   transition: transform 0.1s ease, -webkit-transform 0.1s ease;
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 0.75em 1.5em;
+    background: var(--button_color);
+    color: var(--button_outline_color);
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
   }
   
   button:hover .visitBtn {
-    /* Pull the button upwards when hovered */
-   -webkit-transform: translateY(-0.33em);
-       -ms-transform: translateY(-0.33em);
-           transform: translateY(-0.33em);
+    transform: translateY(-0.33em);
   }
   
   button:active .visitBtn {
-    /* Push the button downwards when pressed */
-   -webkit-transform: translateY(0);
-       -ms-transform: translateY(0);
-           transform: translateY(0);
+    transform: translateY(0);
   }
-
-
-
-
-
-  @media (min-width:768px) {
-
-        .projectsGrid {
-            grid-template-columns: repeat(2, 1fr);
-            width: 95vw;
-        }
-        .card {
-            width: 46vw;
-            height: 30vw;
-        }
-        .descBox{
-        #cardTitle {
-            font-size: 2rem;
-        }
-        #cardText {
-            font-size: 1.3rem;
-            width: 40vw;
-        }
-        }
+  
+  @media (min-width: 768px) {
+    .projectsGrid {
+      grid-template-columns: repeat(2, 1fr);
+      width: 95vw;
+    }
+  
+    .card {
+      width: 46vw;
+      height: 30vw;
+    }
+  
+    .descBox #cardTitle {
+      font-size: 2rem;
+    }
+  
+    .descBox #cardText {
+      font-size: 1.3rem;
+      width: 40vw;
+    }
   }
+  
   @media (min-width: 1024px) {
     .projectsGrid {
       grid-template-columns: repeat(3, 1fr);
       margin: 0;
       padding: 2rem;
       gap: 1rem;
-      align-items: stretch; 
+      align-items: stretch;
     }
-
+  
     .card,
     img {
       width: 100%;
-      height: 100%; 
+      height: 100%;
       border-radius: 5px;
-      object-fit: cover; 
-    }    
-    .descBox{
-        width: 90%;
-    #cardTitle {
-        font-size: 1.3rem;
+      object-fit: cover;
     }
-    #cardText {
-        font-size: 1rem;
-        width: 100%;
+  
+    .descBox {
+      width: 90%;
     }
+  
+    .descBox #cardTitle {
+      font-size: 1.3rem;
     }
-  }
-  @media (min-width: 1200px) { 
-    .descBox{
-        width: 95%;
-    #cardTitle {
-        font-size: 1.5rem;
-    }
-    #cardText {
-        font-size: 1.3rem;
-        width: 100%;
-    }
+  
+    .descBox #cardText {
+      font-size: 1rem;
+      width: 100%;
     }
   }
-  @media (min-width: 1500px) { 
-    .descBox{
-        width: 95%;
-    #cardTitle {
-        font-size: 2.3rem;
+  
+  @media (min-width: 1200px) {
+    .descBox {
+      width: 95%;
     }
-    #cardText {
-        font-size: 1.5rem;
-        width: 100%;
+  
+    .descBox #cardTitle {
+      font-size: 1.5rem;
     }
-    }
-  }
-  @media (min-width: 1800px) { 
-    .descBox{
-        width: 95%;
-    #cardTitle {
-        font-size: 2.3rem;
-    }
-    #cardText {
-        font-size: 2rem;
-        width: 100%;
-    }
+  
+    .descBox #cardText {
+      font-size: 1.3rem;
+      width: 100%;
     }
   }
-
-
-
-
+  
+  @media (min-width: 1500px) {
+    .descBox {
+      width: 95%;
+    }
+  
+    .descBox #cardTitle {
+      font-size: 2.3rem;
+    }
+  
+    .descBox #cardText {
+      font-size: 1.5rem;
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 1800px) {
+    .descBox {
+      width: 95%;
+    }
+  
+    .descBox #cardTitle {
+      font-size: 2.3rem;
+    }
+  
+    .descBox #cardText {
+      font-size: 2rem;
+      width: 100%;
+    }
+  }
   

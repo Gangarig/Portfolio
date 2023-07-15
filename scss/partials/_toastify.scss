@@ -8,3 +8,21 @@
     font-family: $mainFont;
     color: var(--text);
 }
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: var(--bg2);
+    color: var(--text);
+    border: 1px solid var(--black);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #scrollToTopBtn.show {
+    display: block;
+  }
+  

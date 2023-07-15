@@ -91,3 +91,20 @@ $(document).ready(function() {
   });
 });
 
+// scrollToTop button
+window.onscroll = function() { showScrollToTopButton() };
+
+function showScrollToTopButton() {
+  var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollToTopBtn.classList.add("show");
+  } else {
+    scrollToTopBtn.classList.remove("show");
+  }
+}
+
+function scrollToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
