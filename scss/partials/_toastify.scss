@@ -9,20 +9,33 @@
     color: var(--text);
 }
 
-#scrollToTopBtn {
+i {
     display: none;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    padding: 10px;
-    background-color: var(--bg2);
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    line-height: 30px;
     color: var(--text);
-    border: 1px solid var(--black);
-    border-radius: 5px;
+    background-color: var(--bg2);
     cursor: pointer;
+    transition: 0.2s;
+    height: 30px;
   }
-  
-  #scrollToTopBtn.show {
+
+  i:focus , i:hover {
+    font-size: 32px;
+    line-height: 32px;
+    height: 32px;
+  }
+i:active {
+  font-size: 28px;
+  line-height: 28px;
+  height: 28px;
+}
+i.show {
     display: block;
   }
   

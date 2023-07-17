@@ -35,6 +35,19 @@
 .hamburger {
     display: none;
 }
+.nav-bar {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navList {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
 .nav-bar ul {
     display: flex;
 }

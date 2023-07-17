@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GANA</title>
-    <!-- bootstrap link -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!-- style link -->
     <link rel="stylesheet" href="scss/style.css">
     <!-- AOS link -->
@@ -16,11 +14,11 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head> 
 <body>
-    <a class="btn" id="scrollToTopBtn" onclick="scrollToTop()"><i class="bi bi-arrow-up"></i></a>
+    <i class="scrollBtn bi bi-arrow-up-square" id="scrollToTopBtn" onclick="scrollToTop()"></i>
 
     <div class="nav">
         <div class="logo">
-           <a href="#"><p>GA</p><p>NA</p></a>
+           <a href="#"><p class="logoText">GA</p><p class="logoText">NA</p></a>
         </div>
         <div class="hamburger">
             <div class="line"></div>
@@ -28,7 +26,7 @@
             <div class="line"></div>
         </div>
         <nav class="nav-bar">
-            <ul class="list">
+            <ul class="navList">
                 <li>
                     <a class="btn" href="#about" onclick="navbar()" > ABOUT</a>
                 </li>
@@ -100,7 +98,7 @@
                 <div class="list2"  data-aos="fade-up"
                 data-aos-anchor-placement="center-bottom">
                     <h3>Languages I speak:</h3>
-                    <hr>
+                    <hr class="hrLine">
                     <ul>
                         <li>HTML</li>
                         <li>CSS</li>
@@ -113,7 +111,7 @@
                 <div class="list2" data-aos="fade-up"
                 data-aos-anchor-placement="center-bottom">
                     <h3>Frameworks I love:</h3>
-                    <hr>
+                    <hr class="hrLine">
                     <ul>
                         <li>Angular</li>
                         <li>React</li>
@@ -128,7 +126,7 @@
                 <div class="list2"  data-aos="fade-up"
                 data-aos-anchor-placement="center-bottom">
                     <h3>as Team member</h3>
-                    <hr>
+                    <hr class="hrLine">
                         <ul>
                             <li>Jasmine</li>
                             <li>PHP unit Testing</li>
@@ -140,7 +138,7 @@
                 <div class="list2"  data-aos="fade-up"
                 data-aos-anchor-placement="center-bottom">
                         <h3>Personal Skills</h3>
-                        <hr>
+                        <hr class="hrLine">
                         <ul>
                             <li>Sit long hours</li>
                             <li>Consume a lot of caffeine</li>
@@ -150,13 +148,15 @@
             </div>
             <div class="vl"></div>
             <div class="design box">
-                <h2  data-aos="fade-up"
-                data-aos-anchor-placement="center-bottom">Design</h2>
+                <div data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom">
+                <h2 >Design</h2>
+                <p>Currently, I am more dedicated to coding from scratch, but I am familiar with modern technologies and looking forward to challenging myself.</p>
+                </div>
                 <div class="list2"  data-aos="fade-up"
                 data-aos-anchor-placement="center-bottom">
                     <h3>Design Tools</h3>
-                    <hr>
-                    <p>Currently, I am more dedicated to coding from scratch, but I am familiar with modern technologies and looking forward to challenging myself.</p>
+                    <hr class="hrLine">
                     <ul>
                         <li>Webflow</li>
                         <li>Font Awesome</li>

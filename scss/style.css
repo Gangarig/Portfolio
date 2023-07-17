@@ -1,4 +1,4 @@
-@import url(node_modules/bootstrap-icons/font/bootstrap-icons.scss);
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap");
 @import '/node_modules/toastify-js/src/toastify.css';
 .nav {
@@ -36,6 +36,21 @@
 
 .hamburger {
   display: none;
+}
+
+.nav-bar {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navList {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
 }
 
 .nav-bar ul {
@@ -427,6 +442,7 @@ header .headerText a {
 figure {
   width: 100%;
   height: 100%;
+  margin: 0;
 }
 
 .card img {
@@ -780,7 +796,7 @@ footer .footerLinks h4 {
 }
 
 .list2 {
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 .list2 h3 {
   font-size: 1.4rem;
@@ -808,6 +824,12 @@ footer .footerLinks h4 {
   width: 80vw;
 }
 
+div.design {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 80vw;
+}
+
 @media (min-width: 1112px) {
   #about {
     width: 80vw;
@@ -817,7 +839,7 @@ footer .footerLinks h4 {
     flex-direction: column;
     height: -moz-max-content;
     height: max-content;
-    padding-top: 4rem;
+    padding-top: 2rem;
     max-width: 1500px;
   }
   #about .aboutContent {
@@ -827,13 +849,14 @@ footer .footerLinks h4 {
     padding: 2rem;
   }
   #about .aboutContent .box {
-    height: 450px;
+    height: 500px;
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
   }
   .list2 {
-    height: 200px;
+    height: 250px;
   }
   .vl {
     border: 1px solid var(--text);
@@ -844,6 +867,10 @@ footer .footerLinks h4 {
     padding-top: 4rem;
     text-align: center;
     max-width: 1000px;
+  }
+  div.design {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 .toastify.success {
@@ -858,20 +885,35 @@ footer .footerLinks h4 {
   color: var(--text);
 }
 
-#scrollToTopBtn {
+i {
   display: none;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  padding: 10px;
-  background-color: var(--bg2);
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 30px;
   color: var(--text);
-  border: 1px solid var(--black);
-  border-radius: 5px;
+  background-color: var(--bg2);
   cursor: pointer;
+  transition: 0.2s;
+  height: 30px;
 }
 
-#scrollToTopBtn.show {
+i:focus, i:hover {
+  font-size: 32px;
+  line-height: 32px;
+  height: 32px;
+}
+
+i:active {
+  font-size: 28px;
+  line-height: 28px;
+  height: 28px;
+}
+
+i.show {
   display: block;
 }
 
@@ -977,6 +1019,7 @@ a {
   color: var(--text);
   font-size: 2rem;
   color: var(--text);
+  text-decoration: none;
 }
 
 button {
@@ -1017,4 +1060,6 @@ hr {
 
 .hrLine {
   color: var(--text);
+  height: 2px;
+  opacity: 100%;
 }/*# sourceMappingURL=style.css.map */
