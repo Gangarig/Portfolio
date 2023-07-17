@@ -1,4 +1,3 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap");
 @import '/node_modules/toastify-js/src/toastify.css';
 .nav {
@@ -885,7 +884,7 @@ div.design {
   color: var(--text);
 }
 
-i {
+#scrollToTopBtn {
   display: none;
   position: fixed;
   bottom: 20px;
@@ -901,20 +900,30 @@ i {
   height: 30px;
 }
 
-i:focus, i:hover {
+#scrollToTopBtn i {
+  display: block;
+}
+
+#scrollToTopBtn:focus,
+#scrollToTopBtn:hover {
   font-size: 32px;
   line-height: 32px;
   height: 32px;
 }
 
-i:active {
+#scrollToTopBtn:active {
   font-size: 28px;
   line-height: 28px;
   height: 28px;
 }
 
-i.show {
-  display: block;
+.show {
+  display: block !important;
+}
+
+/* Vendor prefixes for older browser support */
+#scrollToTopBtn {
+  transition: 0.2s;
 }
 
 :root {

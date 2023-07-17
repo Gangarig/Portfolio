@@ -91,20 +91,22 @@ $(document).ready(function() {
   });
 });
 
-// scrollToTop button
-window.onscroll = function() { showScrollToTopButton() };
 
-function showScrollToTopButton() {
+window.addEventListener("scroll", function() {
   var scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  if (window.pageYOffset > 100 || document.documentElement.scrollTop > 100) {
     scrollToTopBtn.classList.add("show");
   } else {
     scrollToTopBtn.classList.remove("show");
   }
-}
+});
 
-function scrollToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
+document.getElementById("scrollToTopBtn").addEventListener("click", function(e) {
+  e.preventDefault();
+  if (window.scrollTo) {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  } else {
+    document.documentElement.scrollTop = 0; // Fallback for older browsers
+  }
+});
+

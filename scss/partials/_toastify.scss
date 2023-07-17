@@ -8,34 +8,48 @@
     font-family: $mainFont;
     color: var(--text);
 }
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 30px;
+  color: var(--text);
+  background-color: var(--bg2);
+  cursor: pointer;
+  transition: 0.2s;
+  height: 30px;
+}
 
-i {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    font-size: 30px;
-    margin: 0;
-    padding: 0;
-    line-height: 30px;
-    color: var(--text);
-    background-color: var(--bg2);
-    cursor: pointer;
-    transition: 0.2s;
-    height: 30px;
-  }
+#scrollToTopBtn i {
+  display: block;
+}
 
-  i:focus , i:hover {
-    font-size: 32px;
-    line-height: 32px;
-    height: 32px;
-  }
-i:active {
+#scrollToTopBtn:focus,
+#scrollToTopBtn:hover {
+  font-size: 32px;
+  line-height: 32px;
+  height: 32px;
+}
+
+#scrollToTopBtn:active {
   font-size: 28px;
   line-height: 28px;
   height: 28px;
 }
-i.show {
-    display: block;
-  }
-  
+
+.show {
+  display: block !important;
+}
+
+/* Vendor prefixes for older browser support */
+#scrollToTopBtn {
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
