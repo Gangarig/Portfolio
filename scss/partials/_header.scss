@@ -14,11 +14,11 @@ header{
         align-items: center;
         object-fit: cover;
         padding-bottom: 2rem;
+        path {
+            fill: var(--text);
+        }
         .svg {
             height: 30vh;
-        }
-        .color {
-            fill: var(--text);
         }
     }
     .headerText {

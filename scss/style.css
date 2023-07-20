@@ -295,11 +295,11 @@ header .svgPortrait {
      object-fit: cover;
   padding-bottom: 2rem;
 }
+header .svgPortrait path {
+  fill: var(--text);
+}
 header .svgPortrait .svg {
   height: 30vh;
-}
-header .svgPortrait .color {
-  fill: var(--text);
 }
 header .headerText {
   justify-content: center;
@@ -898,6 +898,8 @@ div.design {
   cursor: pointer;
   transition: 0.2s;
   height: 30px;
+  opacity: 1;
+  z-index: 99999;
 }
 
 #scrollToTopBtn i {
@@ -924,6 +926,10 @@ div.design {
 /* Vendor prefixes for older browser support */
 #scrollToTopBtn {
   transition: 0.2s;
+}
+
+.svg .color {
+  fill: var(--text);
 }
 
 :root {
